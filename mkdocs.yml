@@ -1,0 +1,8 @@
+site_name: Morgan Willow Chen's Blog
+site_url: https://cmw15004431816.github.io/
+nav:
+  - Home: index.md
+  - 1: 1.md
+  - 2: 2.md
+theme:
+  name: material
