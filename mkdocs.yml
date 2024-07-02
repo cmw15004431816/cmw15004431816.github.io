@@ -68,10 +68,13 @@ extra:
       name: Morgan Willow Chen on LinkedIn
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/mwc15004431816
-      name: Moore Willow Chen on Instagram
+      name: Morgan Willow Chen on Instagram
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/profile.php?id=100085061186301
       name: Morgan Willow Chen on Facebook
+    - icon: fontawesome/brands/threads
+      link: https://www.threads.net/@mwc15004431816
+      name: Morgan Willow Chen on Threads
 copyright: >-
   Copyright &copy; 2024 - 2024 Morgan Willow Chen. All rights reserved.
 markdown_extensions:
