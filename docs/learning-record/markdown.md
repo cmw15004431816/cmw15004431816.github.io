@@ -1,10 +1,10 @@
 # Basic writing and formatting syntax
 
-Create a sophisticated formattingfor your prose and code on GitHub with simple syntax.
+Create a sophisticated formatting for your prose and code on GitHub with simple syntax.
 
 ## Headings
 
-TO create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
+To create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
 
 ```
 # A first-level heading
@@ -31,7 +31,7 @@ plain text
 
 ## Styling text
 
-You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in commment fields and `.md` files.
+You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in comment fields and `.md` files.
 
 Style | Syntax | Keyboard shortcut | Example | Output
 
@@ -79,7 +79,7 @@ Text that is not a quote
 
 ## Quoting code
 
-You can call out code or a command within a sentence with single baketicks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
+You can call out code or a command within a sentence with single backticks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
 
 ```
 Use `git status` to list all new or modified files that haven't yet been committed.
