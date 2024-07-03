@@ -5,7 +5,7 @@ nav:
   - Home:
       - index.md
   - Learning record:
-    - learning-record/markdown.md
+      - learning-record/markdown.md
   - Page 1(testing):
       - section/1.md
       - "2": 2.md
@@ -86,6 +86,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
+  - codehilite:
+      guess_lang: false
 plugins:
   - search
   - social
