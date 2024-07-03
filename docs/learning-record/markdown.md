@@ -15,6 +15,7 @@ TO create a heading, add one to six `#` symbols before your heading text. The nu
 ###### A sixth-level heading
 ```
 ![img](../img/1.png)
+<!--This is the same as ![img](/docs/img/1.png)-->
 
 ## Styling text
 
@@ -98,6 +99,8 @@ git commit
 
 ## Supported color models
 
+> This feature is only available on GitHub, it will not work on MkDocs
+
 In issues, pull requests and discussions, you can call out colors within a sentence by using backticks. A supported color model within backticks will display a visualization of the color.
 
 ```
@@ -144,7 +147,25 @@ A relative link is a link that is relative to the current file. For example, if 
 
 `[Contribution guidelines for this project](docs/CONTRIBUTING.md)`
 
-GitHub will automatically transform your relative link or image path based on whatever branch you're currently on, so that the link or path always works. The path of the link will be relative to the current file. Links starting with `/` will be relative to the repository root. You can use all relative link operands, such as `./` and `../`.
+GitHub will automatically transform your relative link or image path based on whatever branch you're currently on, so that the link or path always works. The path of the link will be relative to the current file. **Links starting with `/` will be relative to the repository root. You can use all relative link operands, such as `./` and `../`.**
+
+> `/` represents the root of the repository
+> 
+> `./` represents the current path
+>
+> `../` represents the parent path of the current path
+>
+> When there is no link operands ahead, it is the same as the link starting with `./`
+> 
+> - Example: `docs/CONTRIBUTING.md` is equivalent to `./docs/CONTRIBUTING.md`
+> 
+> When you are currently at the root of the repository, these three links are equivalent:
+> 
+> - `docs/CONTRIBUTING.md`(Current is the root)
+> - `./docs/CONTRIBUTING.md`(Same as the last one)
+> - `/docs/CONTRIBUTING.md`(Root is current)
+> 
+> In other cases, `docs/CONTRIBUTING.md` and `/docs/CONTRIBUTING.md` point to different paths, they are not equvalent
 
 Your link text should be on a single line. The example below will not work.
 
@@ -157,15 +178,36 @@ Relative links are easier for users who clone your repository. Absolute links ma
 
 ## Images
 
-To be continued...
+You can display an image by adding `!` and wrapping the alt text in `[ ]`. Alt text is a short text equivalent of the information in the image. Then, wrap the link for the image in parentheses `( )`.
 
-Last updated 07/02/2024
+`![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)`
 
-```C
-#include<stdio.h>
-int main(void)
-{
-    printf("Hello, world!\n");
-    return 0;
-}
-```
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+
+> Note: When you want to display an image that is in your repository, use relative links instead of absolute links.
+
+Here are some examples for using relative links to display an image.
+
+Context | Relative Link
+
+In a `.md` file on the same branch | `/assets/images/electrocat.png`
+
+In a `.md` file on another branch | `/../main/assets/images/electrocat.png`
+
+In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true`
+
+In a `.md` file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png`
+
+In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true`
+
+> Note: The last two relative links in the table above will work for images in a private repository only if the viewer has at least read access to the private repository that contains these images.
+
+## Specifying the theme an image is shown to
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
+
+Last updated 07/03/2024
