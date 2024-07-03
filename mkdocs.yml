@@ -1,4 +1,4 @@
-site_name: Morgan Willow Chen's Blog
+site_name: Morgan Willow Chen's Blog (under construction)
 site_description: This is the blog of Morgan Willow Chen.
 site_url: https://cmw15004431816.github.io/
 nav:
@@ -19,11 +19,11 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme: slate)"
       scheme: slate
       toggle:
         icon: material/weather-night
-        name: Switch to system preference
+        name: Switch to light mode
   language: en
   features:
     # - navigation.instant
@@ -62,23 +62,53 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/cmw15004431816
       name: Morgan Willow Chen on GitHub
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/25033865/morgan-willow-chen
+      name: Morgan Willow Chen on Stackoverflow
+    - icon: simple/codeforces
+      link: https://codeforces.com/profile/cmw15004431816
+      name: Morgan Willow Chen on Codeforces
     - icon: fontawesome/brands/telegram
       link: https://t.me/mwc15004431816
       name: Morgan Willow Chen on Telegram
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/morgan-willow-chen-5b2337280/
       name: Morgan Willow Chen on LinkedIn
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/mwc15004431816
-      name: Morgan Willow Chen on Instagram
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCrh1YzVHgef6YCR2MJLobEA
+      name: Morgan Willow Chen on YouTube
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/profile.php?id=100085061186301
       name: Morgan Willow Chen on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/mwc15004431816
+      name: Morgan Willow Chen on Instagram
     - icon: fontawesome/brands/threads
       link: https://www.threads.net/@mwc15004431816
       name: Morgan Willow Chen on Threads
+    - icon: fontawesome/brands/quora
+      link: https://www.quora.com/profile/Morgan-Willow-Chen-G
+      name: Morgan Willow Chen on Quora
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/user/CMW15004431816/
+      name: Morgan Willow Chen on Reddit
+    - icon: fontawesome/brands/pinterest
+      link: https://www.pinterest.com/cmw15004431816/
+      name: Morgan Willow Chen on Pinterest
+    - icon: fontawesome/brands/tiktok
+      link: https://www.tiktok.com/@cmw15004431816
+      name: Morgan Willow Chen on TikTok
+    - icon: fontawesome/brands/spotify
+      link: https://open.spotify.com/user/31e225rqd5nznnsnl6bqpjidgyva
+      name: Morgan Willow Chen on Spotify
+    - icon: fontawesome/brands/tumblr
+      link: https://www.tumblr.com/blog/mwc15004431816
+      name: Morgan Willow Chen on Tumblr
+    - icon: fontawesome/brands/snapchat
+      link: https://www.snapchat.com/add/mwc15004431816/
+      name: Morgan Willow Chen on Snapchat
 copyright: >-
-  Copyright &copy; 2024 - 2024 Morgan Willow Chen. All rights reserved.
+  Copyright &copy; 2024 - 2024 Morgan Willow Chen. All rights reserved. <br><p>Licensed under the <a href="https://github.com/cmw15004431816/cmw15004431816.github.io/blob/main/LICENSE">GPL v3.0 License</a> and <a href="https://github.com/cmw15004431816/cmw15004431816.github.io/blob/main/ADDITIONAL%20TERMS">additional terms</a>.</p>
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
