@@ -5,7 +5,7 @@ nav:
   - Home:
       - index.md
   - Learning record:
-      - learning-record/markdown.md
+      - learning-record/Basic-writing-and-formatting-syntax.md
   - Page 1(testing):
       - section/1.md
       - "2": 2.md
