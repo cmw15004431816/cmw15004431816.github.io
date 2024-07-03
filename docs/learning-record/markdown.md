@@ -4,7 +4,7 @@ Create a sophisticated formatting for your prose and code on GitHub with simple 
 
 ## Headings
 
-To create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
+TO create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
 
 ```
 # A first-level heading
@@ -14,24 +14,11 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 ##### A fifth-level heading
 ###### A sixth-level heading
 ```
-
-# A first-level heading
-
-## A second-level heading
-
-### A third-level heading
-
-#### A fourth-level heading
-
-##### A fifth-level heading
-
-###### A sixth-level heading
-
-plain text
+![img](../img/1.png)
 
 ## Styling text
 
-You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in comment fields and `.md` files.
+You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in commment fields and `.md` files.
 
 Style | Syntax | Keyboard shortcut | Example | Output
 
@@ -79,7 +66,7 @@ Text that is not a quote
 
 ## Quoting code
 
-You can call out code or a command within a sentence with single backticks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
+You can call out code or a command within a sentence with single baketicks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
 
 ```
 Use `git status` to list all new or modified files that haven't yet been committed.
@@ -173,3 +160,12 @@ Relative links are easier for users who clone your repository. Absolute links ma
 To be continued...
 
 Last updated 07/02/2024
+
+```C
+#include<stdio.h>
+int main(void)
+{
+    printf("Hello, world!\n");
+    return 0;
+}
+```
