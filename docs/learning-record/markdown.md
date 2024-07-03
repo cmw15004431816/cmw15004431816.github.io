@@ -4,7 +4,7 @@ Create a sophisticated formatting for your prose and code on GitHub with simple 
 
 ## Headings
 
-To create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
+TO create a heading, add one to six `#` symbols before your heading text. The number of `#` you use will determine the hierarchy level and typeface size of the heading.
 
 ```
 # A first-level heading
@@ -21,21 +21,23 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 
 You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in commment fields and `.md` files.
 
-Style | Syntax | Keyboard shortcut | Example | Output
+ |                  Style |             Syntax |                                 Keyboard shortcut |                                  Example |                                 Output |
+ | ---------------------: | -----------------: | ------------------------------------------------: | ---------------------------------------: | -------------------------------------: |
+ |                   Bold | `** **` or `__ __` | `Command`+`B` (Mac) or `Ctrl`+`B` (Windows/Linux) |                  `**This is bold text**` |                  __This is bold text__ |
+ |                 Italic |     `* *` or `_ _` | `Command`+`I` (Mac) or `Ctrl`+`I` (Windows/Linux) |              `_This text is italicized_` |              *This text is italicized* |
+ |          Strikethrough |            `~~ ~~` |                                              None |             `~~This was mistaken text~~` |           ~~This was mistaken text~~\* |
+ | Bold and nested italic |  `** **` and `_ _` |                                              None | `**This text is _extremely_ important**` | __This text is *extremely* important__ |
+ |    All bold and italic |          `*** ***` |                                              None |       `***All this text is important***` |       _**All this text is important**_ |
+ |              Subscript |     `<sub> </sub>` |                                              None |     `This is a <sub>subscipt</sub> text` |     This is a<sub>subscript</sub> text |
+ |            Superscript |     `<sup> </sup>` |                                              None |  `This is a <sup>superscript</sup> text` |   This is a<sup>superscript</sup> text |
 
-Bold | `** **` or `__ __` | `Command`+`B` (Mac) or `Ctrl`+`B` (Windows/Linux) | `**This is bold text**` | __This is bold text__
+> \*: I don't know why mkdocs doesn't support using `~~ ~~` to apply the strikethrough effect. Maybe this is not compatible with my material theme.
 
-Italic | `* *` or `_ _` | `Command`+`I` (Mac) or `Ctrl`+`I` (Windows/Linux) | `_This text is italicized_` | *This text is italicized*
+We can use the HTML `<del>` tag to apply the strikethrough effect.
 
-Strikethrough | `~~ ~~` | None | `~~This was mistaken text` | ~~This was mistaken text~~
-
-Bold and nested italic | `** **` and `_ _` | None `**This text is _extremely_ important**` | __This text is *extremely* important__
-
-All bold and italic | `*** ***` | None | `***All this text is important***` | _**All this text is important**_
-
-Subscript | `<sub> </sub>` | None | `This is a <sub>subscipt</sub> text` | This is a<sub>subscript</sub> text
-
-Superscript | `<sup> </sup>` | None | `This is a <sup>superscript</sup> text` | This is a<sup>superscript</sup> text
+|         Style |         Syntax | Keyboard shortcut |                             Example | Output                            |
+| ------------: | -------------: | ----------------: | ----------------------------------: | --------------------------------- |
+| Strikethrough | `<del> </del>` |              None | `<del>This was mistaken text</del>` | <del>This was mistaken text</del> |
 
 ## Quoting text
 
@@ -139,13 +141,11 @@ The background color is `#ffffff` for light mode and `#000000` for dark mode.
 
 Here are the currently supported color models.
 
-Color | Syntax | Example | Output
-
-HEX | \`#RRGGBB\` | \`#0969DA\` | `#0969DA`
-
-RGB | \`rgb(R,G,B)\` | \`rgb(9, 105, 218)\` | `rgb(9, 105, 218)`
-
-HSL | \`hsl(H,S,L)\` | \`hsl(212, 92%, 45%)\` | `hsl(212, 92%, 45%)`
+| Color |         Syntax |                Example | Output               |
+| ----: | -------------: | ---------------------: | -------------------- |
+|   HEX |    \`#RRGGBB\` |            \`#0969DA\` | `#0969DA`            |
+|   RGB | \`rgb(R,G,B)\` |   \`rgb(9, 105, 218)\` | `rgb(9, 105, 218)`   |
+|   HSL | \`hsl(H,S,L)\` | \`hsl(212, 92%, 45%)\` | `hsl(212, 92%, 45%)` |
 
 > Note:
 > 
@@ -216,17 +216,13 @@ You can display an image by adding `!` and wrapping the alt text in `[ ]`. Alt t
 
 Here are some examples for using relative links to display an image.
 
-Context | Relative Link
-
-In a `.md` file on the same branch | `/assets/images/electrocat.png`
-
-In a `.md` file on another branch | `/../main/assets/images/electrocat.png`
-
-In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true`
-
-In a `.md` file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png`
-
-In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true`
+|                                                     Context | Relative Link                                                          |
+| ----------------------------------------------------------: | ---------------------------------------------------------------------- |
+|                          In a `.md` file on the same branch | `/assets/images/electrocat.png`                                        |
+|                           In a `.md` file on another branch | `/../main/assets/images/electrocat.png`                                |
+|     In issues, pull requests and comments of the repository | `../blob/main/assets/images/electrocat.png?raw=true`                   |
+|                       In a `.md` file in another repository | `/../../../../github/docs/blob/main/assets/images/electrocat.png`      |
+| In issues, pull requests and comments of another repository | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true` |
 
 > Note: The last two relative links in the table above will work for images in a private repository only if the viewer has at least read access to the private repository that contains these images.
 
