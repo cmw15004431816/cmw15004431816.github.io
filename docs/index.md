@@ -1,4 +1,6 @@
-# **Welcome to Morgan Willow Chen's Blog**
+# Welcome to Morgan Willow Chen's Blog 
+
+## **This website is currently under construction...**
 
 Here is a student currently learning EE and CS.
 
