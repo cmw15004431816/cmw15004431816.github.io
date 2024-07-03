@@ -1,6 +1,6 @@
 # Basic writing and formatting syntax
 
-Create a sophisticated formatting for your prose and code on GitHub with simple syntax.
+Create sophisticated formatting for your prose and code on GitHub with simple syntax.
 
 ## Headings
 
@@ -19,7 +19,7 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 
 ## Styling text
 
-You can indicate emphasis with bold, italic, strikethrough, subscript or superscript text in commment fields and `.md` files.
+You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and `.md` files.
 
  |                  Style |             Syntax |                                 Keyboard shortcut |                                  Example |                                 Output |
  | ---------------------: | -----------------: | ------------------------------------------------: | ---------------------------------------: | -------------------------------------: |
@@ -49,7 +49,7 @@ Text that is not a quote
 > Text that is a quote
 ```
 
-Quoted text is indented, with a different type color.
+Quoted text is indented, with a different type of color.
 
 Text that is not a quote.
 
@@ -71,33 +71,33 @@ You can add another quote in a quote just like this:
 
 > This is the quote
 > 
-> >This is quote in the quote
+> >This is a quote in the quote
 > 
 > This is the quote
 >
 > > > This is quote in the quote of the quote
 > 
-> > This is quote in the quote
+> > This is a quote in the quote
 >
 > This is the quote
 >
-> > This is quote in the quote
+> > This is a quote in the quote
 >
 > > > This is quote in the quote of the quote
 > 
 > This is the quote
 >
-> > This is quote in the quote
+> > This is a quote in the quote
 >
 > This is the quote
 >
 > > > This is quote in the quote of the quote
 >
-> This is the qupte
+> This is the quote
 
 ## Quoting code
 
-You can call out code or a command within a sentence with single baketicks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
+You can call out code or a command within a sentence with single backticks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
 
 ```
 Use `git status` to list all new or modified files that haven't yet been committed.
@@ -155,9 +155,9 @@ Here are the currently supported color models.
 
 ## Links
 
-You can create an inline link by warpping link in brackets `[ ]`, and the wrapping the URL in parentheses `( )`. You can also use the keyboard shortcut `Command`+`K` to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.
+You can create an inline link by wrapping the link in brackets `[ ]`, and wrapping the URL in parentheses `( )`. You can also use the keyboard shortcut `Command`+`K` to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.
 
-You can also create Markdown hyperlink by highlighting the text and using the keyboard shortcut `Command`+`V`. If you'd like to replace the text with the link, use the shortcut `Command`+`Shift`+`V`.
+You can also create a Markdown hyperlink by highlighting the text and using the keyboard shortcut `Command`+`V`. If you'd like to replace the text with the link, use the shortcut `Command`+`Shift`+`V`.
 
 `This site was built using [GitHub Pages](https://pages.github.com/).`
 
@@ -183,7 +183,7 @@ GitHub will automatically transform your relative link or image path based on wh
 >
 > `../` represents the parent path of the current path
 >
-> When there is no link operands ahead, it is the same as the link starting with `./`
+> When there are no link operands ahead, it is the same as the link starting with `./`
 > 
 > - Example: `docs/CONTRIBUTING.md` is equivalent to `./docs/CONTRIBUTING.md`
 > 
@@ -193,7 +193,7 @@ GitHub will automatically transform your relative link or image path based on wh
 > - `./docs/CONTRIBUTING.md`(Same as the last one)
 > - `/docs/CONTRIBUTING.md`(Root is current)
 > 
-> In other cases, `docs/CONTRIBUTING.md` and `/docs/CONTRIBUTING.md` point to different paths, they are not equvalent
+> In other cases, `docs/CONTRIBUTING.md` and `/docs/CONTRIBUTING.md` point to different paths, they are not equal
 
 Your link text should be on a single line. The example below will not work.
 
@@ -423,13 +423,13 @@ For more information on backslashes, see Daring Fireball's "[Markdown Syntax](ht
 
 > Note: The Markdown formatting will not be ignored in the title of an issue or a pull request.
 
-## Disabling Markdown renderinbg
+## Disabling Markdown rendering
 
 When viewing a Markdown file, you can click **Code** at the top of the file to disable Markdown rendering and view the file's source instead.
 
 ![img](https://docs.github.com/assets/cb-11496/mw-1440/images/help/writing/display-markdown-as-source-global-nav-update.webp)
 
-Disabling Markdown rendering enables you to use source view features, such as line linking, which is not possible when viewinbg rendered Markdown files.
+Disabling Markdown rendering enables you to use source view features, such as line linking, which is not possible when viewing rendered Markdown files.
 
 ---
 
