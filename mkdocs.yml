@@ -116,8 +116,20 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
-  - codehilite:
-      guess_lang: false
+  - codehilite
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.extra
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  # - pymdownx.tabbed # You have configured the button to switch between light and dark mode, if you use this extension, you will be unable to switch the mode by clicking the button on the pages that use this extension, other pages will not be affected.
 plugins:
   - search
   - social
+  - mermaid2:
+      arguments:
+        theme: default
+      javascript: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
