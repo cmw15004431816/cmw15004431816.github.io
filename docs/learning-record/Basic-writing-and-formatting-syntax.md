@@ -95,6 +95,16 @@ You can add another quote in a quote just like this:
 >
 > This is the quote
 
+You can add a horizontal line before a quote to make the quote more beautiful.
+
+```
+---
+> This is the quote
+```
+
+---
+> This is the quote
+
 ## Quoting code
 
 You can call out code or a command within a sentence with single backticks. **The text within the backticks will not be formatted.** You can also press the `Command`+`E` (Mac) or `Ctrl`+`E` (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.
@@ -126,6 +136,14 @@ git status
 git add
 git commit
 ```
+
+To display triple backticks  ``` in a fenced code block, wrap them inside quadruple ```` backticks.
+
+````
+```
+Look! You can see my backticks.
+```
+````
 
 ## Supported color models
 
@@ -184,6 +202,10 @@ GitHub will automatically transform your relative link or image path based on wh
 > `../` represents the parent path of the current path
 >
 > When there are no link operands ahead, it is the same as the link starting with `./`
+> 
+> Links starting with `/` are **absolute links**.
+>
+> Links starting with `./` `../` or nothing are **relative links**.
 > 
 > - Example: `docs/CONTRIBUTING.md` is equivalent to `./docs/CONTRIBUTING.md`
 > 
@@ -431,6 +453,331 @@ When viewing a Markdown file, you can click **Code** at the top of the file to d
 
 Disabling Markdown rendering enables you to use source view features, such as line linking, which is not possible when viewing rendered Markdown files.
 
+## Creating a table
+
+You can create a table like this:
+
+```
+
+| Rank | THING-TO-RANK |
+| ---: | ------------- |
+|    1 |               |
+|    2 |               |
+|    3 |               |
+```
+
+| Rank | THING-TO-RANK   |
+| ---: | --------------- |
+|    1 | I like this     |
+|    2 | I like Markdown |
+|    3 |                 |
+
+>If you use `---:`, it will make the whole column right ailgned
+>
+>If you use `:---:`, it will make the whole column center aligned
+>
+>If you use `:---`, it will make the whole column left aligned
+>
+>If you use `---`, the whole column will be left aligned by default
+>
+> There must be at least three hyphens `---` in each column of the header row.
+>
+> Cells can vary in width and do not need to be perfectly aligned within columns.
+
+```
+
+| Left-aligned | Center-aligned | Right-aligned | Default |
+| :----------- | :------------: | ------------: | ------- |
+| 1            |       2        |             3 | 4       |
+```
+
+| Left-aligned | Center-aligned | Right-aligned | Default |
+| :----------- | :------------: | ------------: | ------- |
+| 1            |       2        |             3 | 4       |
+
+To include a `|` in the table, use `\|`.
+
+|    Name    | Character |
+| :--------: | --------- |
+| `Backtick` | `         |
+|  **Pipe**  | \|        |
+
+> You can use formatting such as links, inline code blocks, and text styling within your table:
+
+<details open>
+<summary>Tips:</summary>
+You must include a blank line before your table in order for it to correctly render.
+</details>
+
+## Creating a collapsed section
+
+To keep your content tidy, you can use the `<details>` tag to create an expandible collapsed section.
+
+
+1. To create a collapsed section for the table you created, wrap your table in `<details>` tags like in the following example.
+
+```
+  <details>
+  <summary>My top THINGS-TO-RANK</summary>
+  YOUR TABLE
+  </details>
+```
+
+2. Between the `<summary>` tags, replace THINGS-TO-RANK with whatever you ranked in your table.
+
+3. Optionally, to make the section display as open by default, add the open attribute to the `<details>` tag.
+
+```
+<details open>
+```
+
+<details>
+
+<summary>This is a collapsed section.<br>I like apple</summary>
+
+Here is what is collapsed.
+<br>
+Good luck!
+
+</details>
+
+> `<br>` is used to break the line in HTML.
+>
+> When using the material theme for MkDocs, if you want to change to a new line in the details section including the summary section, you must use `<br>`. If you just add two lines, the line in the middle will be ignored so it will not work.
+>
+> This will not work for material theme for MkDocs, and the details or summary will remain in only one line. But it **does** work for Markdown, which means that if you use a Markdown previewer, the details or summary will be displayed in two separate lines.
+> 
+> ---
+> 
+>`<summary>`This is a collapsed section.
+>
+>I like apple`</summary>`
+
+<details open>
+
+<summary>This is a open-by-default collapsed section</summary>
+
+<br>Here is what is collapsed.<br>Good luck!
+
+</details>
+
+We recommend that the summary of a collapsed section be in one line.
+
+<details>
+<summary>My top languages(collapesd by default)</summary>
+
+| Rank | Languages |
+| ---: | --------- |
+|    1 | C         |
+|    2 | C++       |
+|    3 | Java      |
+
+</details>
+
+<details open>
+<summary>My top languages(open by default)</summary>
+
+| Rank | Languages |
+| ---: | --------- |
+|    1 | C         |
+|    2 | C++       |
+|    3 | Java      |
+
+![img](/docs/img/1.png)
+
+> This is the quote
+
+`Hello` is the code.
+
+</details>
+
+<details>
+<summary>Hello world!</summary>
+
+```ruby
+puts "Hello, world!"
+```
+
+```C
+#include<stdio.h>
+int main(void)
+{
+  printf("Hello, world");
+  return 0;
+}
+```
+</details>
+
+I have to point out with regret that the material theme for MkDocs only supports code blocks to be collapsed currently. All other features such as bold, italic, images, hyperlinks, tables and quotes are not supported.
+
+But in Markdown, these features are supported.
+
+![img](../img/3.png)
+
+```
+Collapesd
+```
+
+![img](../img/2.png)
+
+```
+Open
+```
+
+In Markdown, if you use this:
+
+`<summary>Hello, world!</summary>`
+
+without the `<details>` tag, you will only see the plain text `Hello, world!`.
+
+But in the material theme for MkDocs, it will display just the same as the collapsed collapse section, but the section cannot be opened.
+
+<summary>Hello, world!</summary>
+
+## Create Mermaid diagrams
+
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+Unfortunately, I failed when configuring MkDocs to support Mermaid. Currently MkDocs does not support rendering Mermaid diagrams.
+
+```mermaid
+  info
+```
+![img](../img/4.png)
+
+The apperance in VScode.
+
+When using VScode to preview the Mermaid diagrams, you need to install the [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) extension.
+
+For more types of diagrams, please visit [this link](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams).
+
+## Several MkDocs features
+
+These features are only available with MkDocs. They are not available with Markdown.
+
+###  Admonition
+
+> You need to configure -admonition in `mkdocs.yml`
+
+You can use this to create a note:
+
+```
+!!! note
+    This is a note.
+```
+
+!!! note
+    This is a note.
+
+!!! Hello 
+    Hello World!
+    
+    I like to program.
+
+The `title` must be in one line, the `content` can be in more than one lines.
+
+It can't be collapsed.
+
+### Pymdownx.details
+
+> You need to configure -pymdownx.details in `mkdocs.yml`
+
+You can create a collapsible section like this:
+
+```
+??? note "Click to expand"
+    This is a collapsible section.
+```
+
+You can also use HTML, for sure:
+
+```
+<details>
+<summary>Click to expand</summary>
+This is a collapsible section.
+</details>
+```
+
+<details>
+<summary>Click to expand, using HTML</summary>
+This is a collapsible section.
+</details>
+
+??? note "Click to expand, using ???"
+    This is a collapsible section.
+
+These two ways have similar appearances, but using `???` is easier and more beautiful.
+
+### Pymdownx.smartsymbols
+
+> You need to configure -pymdownx.smartsymbols in `mkdocs.yml`
+
+(c) == ©
+
+```
+(c) will become ©
+```
+
+### Pymdownx.tabbed
+
+> You need to configure -pymdownx.tabbed in `mkdocs.yml`
+>
+> **But I haven't activated this feature yet**
+
+If you configure this feature, you can create code blocks like this:
+
+````
+=== "Python"
+    ```python
+    print("Hello, World!")
+    ```
+=== "JavaScript"
+    ```javascript
+    console.log("Hello, World!");
+    ```
+````
+
+> Remember to add the space between the `===` and the`"`
+
+It will look like this:
+
+![img](../img/5.png)
+
+But without this feature, you can also achieve almost the same appearance:
+
+````
+Python
+```python
+    print("Hello, World!")
+```
+JavaScript
+```javascript
+    console.log("Hello, World!");
+```
+````
+
+Python
+
+```python
+print("Hello, World!")
+```
+
+JavaScript
+
+```javascript
+console.log("Hello, World!");
+```
+
+## Writing mathematical expressions
+
 ---
 
 This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). 
@@ -439,4 +786,4 @@ The author has made some edits.
 
 Author: Morgan Willow Chen
 
-Last updated 07/03/2024
+Last updated 07/06/2024
