@@ -1,6 +1,6 @@
 site_name: Morgan Willow Chen's Blog (under construction)
 site_description: This is the blog of Morgan Willow Chen.
-site_url: https://cmw15004431816.github.io/
+site_url: https://cmw15004431816.link/
 nav:
   - Home:
       - index.md
