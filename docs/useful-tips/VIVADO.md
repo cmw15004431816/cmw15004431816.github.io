@@ -1,13 +1,13 @@
 # How to suppress the DRC errors in VIVADO 2024.1
 
 !!! Warning
-    ${\color{red}\text{Before you following my instrustions, you should get fully unstanding about the risks of doing this.}}$
+    ${\color{red}\text{Before you follow my instructions, you should get a full understanding of the risks of doing this.}}$
     
     If you are not sure about the risks, first read the [Appendix](#appendix-risks-of-suppressing-drc-errors) section of this blog.
 
 ## Background
 
-I have been using VIVADO 2023.2 version for developing. But I upgrade to its 2024.1 version recently.
+I have been using the VIVADO 2023.2 version for development. But I upgraded to its 2024.1 version recently.
 
 When developing with a board whose pins are limited in amount, sometimes there are not enough pins for you to configure in the constraints file.
 
@@ -21,9 +21,9 @@ But when you run the `Generate Bitstream` process, you will encounter some error
 
 > [DRC NSTD-1] Unspecified I/O Standard: 20 out of 48 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: res[3:0], rreg1[3:0], rreg2[3:0], rreg3[3:0], and rreg4[3:0].
 
-You will recive two error messages in total. The one above is about the `NSTD`, and another one is about `UCIO`, which is very similar to the `NSTD` error message.
+You will receive two error messages in total. The one above is about the `NSTD`, and another one is about `UCIO`, which is very similar to the `NSTD` error message.
 
-The error messages will be throwed during the `DRC` process.
+The error messages will be thrown during the `DRC` process.
 
 ## How can you solve the error according to the error message
 
@@ -42,13 +42,13 @@ For specific step, you need: `NOTE: When using the Vivado Runs infrastructure (e
 
 There are two *important* parts in the second solution, the first one is the command: `set_property SEVERITY {Warning} [get_drc_checks NSTD-1]` and the other one is `add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run`.
 
-But this message didn't guide you very detailedly. If it is the first time of you to meet the error, you may need a step-by-step instruction. So I threw the error message to ChatGPT.
+But this message didn't guide you very detailedly. If it is the first time you have encountered the error, you may need a step-by-step instruction. So I threw the error message to ChatGPT.
 
 ### Helped by ChatGPT
 
-ChatGPT gave me detailed instructions but not allow the ways it gave are useful.
+ChatGPT gave me detailed instructions but only two of the ways it gave me are useful.
 
-I would like to give two way that may be useful.
+I would like to give two ways that may be useful.
 
 #### First:
 
@@ -82,7 +82,7 @@ I will recommend you to put the `pre_hook.tcl` file under the project directory 
 
 ![img](../img/7.png)
 
-Next, go to VIVADO. Look at the left sidebar. Under the `Project Manager` ciick `Settings`. In the `Project Settings` section, click the `Implementation`. Under `Settings`, find `Design Intialization (init_design)` click :material-dots-horizontal: at left of the `tcl.pre` section:
+Next, go to VIVADO. Look at the left sidebar. Under the `Project Manager` click `Settings`. In the `Project Settings` section, click the `Implementation`. Under `Settings`, find `Design Intialization (init_design)` and click :material-dots-horizontal: at the left of the `tcl.pre` section:
 
 ![img](../img/8.png)
 
