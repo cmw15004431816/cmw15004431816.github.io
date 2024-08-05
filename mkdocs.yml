@@ -6,6 +6,8 @@ nav:
       - index.md
   - Learning record:
       - learning-record/Basic-writing-and-formatting-syntax.md
+  - Useful tips:
+      - "This is a useful tip on using VIVADO 2024.1": useful-tips/VIVADO.md
   - Page 1(testing):
       - section/1.md
       - "2": 2.md
@@ -125,11 +127,17 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.smartsymbols
+  - footnotes
   # - pymdownx.tabbed # You have configured the button to switch between light and dark mode, if you use this extension, you will be unable to switch the mode by clicking the button on the pages that use this extension, other pages will not be affected.
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist
 plugins:
   - search
   - social
   - mermaid2:
       arguments:
         theme: default
-      javascript: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+      javascript: https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js
