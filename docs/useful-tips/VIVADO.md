@@ -1,3 +1,10 @@
+# How to suppress the DRC errors in VIVADO 2024.1
+
+!!! Warning
+    ${\color{red}\text{Before you following my instrustions, you should get fully unstanding about the risks of doing this.}}$
+    
+    If you are not sure about the risks, first read the [Appendix](#appendix-risks-of-suppressing-drc-errors) section of this blog.
+
 ## Background
 
 I have been using VIVADO 2023.2 version for developing. But I upgrade to its 2024.1 version recently.
