@@ -21,19 +21,21 @@ To create a heading, add one to six `#` symbols before your heading text. The nu
 
 You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and `.md` files.
 
- |                  Style |             Syntax |                                 Keyboard shortcut |                                  Example |                                 Output |
- | ---------------------: | -----------------: | ------------------------------------------------: | ---------------------------------------: | -------------------------------------: |
- |                   Bold | `** **` or `__ __` | `Command`+`B` (Mac) or `Ctrl`+`B` (Windows/Linux) |                  `**This is bold text**` |                  __This is bold text__ |
- |                 Italic |     `* *` or `_ _` | `Command`+`I` (Mac) or `Ctrl`+`I` (Windows/Linux) |              `_This text is italicized_` |              *This text is italicized* |
- |          Strikethrough |            `~~ ~~` |                                              None |             `~~This was mistaken text~~` |           ~~This was mistaken text~~\* |
- | Bold and nested italic |  `** **` and `_ _` |                                              None | `**This text is _extremely_ important**` | __This text is *extremely* important__ |
- |    All bold and italic |          `*** ***` |                                              None |       `***All this text is important***` |       _**All this text is important**_ |
- |              Subscript |     `<sub> </sub>` |                                              None |     `This is a <sub>subscipt</sub> text` |     This is a<sub>subscript</sub> text |
- |            Superscript |     `<sup> </sup>` |                                              None |  `This is a <sup>superscript</sup> text` |   This is a<sup>superscript</sup> text |
+ |         Style          |       Syntax       |                 Keyboard shortcut                 |                 Example                  |                 Output                 |
+ | :--------------------: | :----------------: | :-----------------------------------------------: | :--------------------------------------: | :------------------------------------: |
+ |          Bold          | `** **` or `__ __` | `Command`+`B` (Mac) or `Ctrl`+`B` (Windows/Linux) |         `**This is bold text**`          |         __This is bold text__          |
+ |         Italic         |   `* *` or `_ _`   | `Command`+`I` (Mac) or `Ctrl`+`I` (Windows/Linux) |       `_This text is italicized_`        |       *This text is italicized*        |
+ |     Strikethrough      |      `~~ ~~`       |                       None                        |       `~~This was mistaken text~~`       |      ~~This was mistaken text~~\*      |
+ | Bold and nested italic | `** **` and `_ _`  |                       None                        | `**This text is _extremely_ important**` | __This text is *extremely* important__ |
+ |  All bold and italic   |     `*** ***`      |                       None                        |    `***All this text is important***`    |    _**All this text is important**_    |
+ |       Subscript        |   `<sub> </sub>`   |                       None                        |   `This is a <sub>subscipt</sub> text`   |   This is a<sub>subscript</sub> text   |
+ |      Superscript       |   `<sup> </sup>`   |                       None                        | `This is a <sup>superscript</sup> text`  |  This is a<sup>superscript</sup> text  |
 
 > \*: I don't know why mkdocs doesn't support using `~~ ~~` to apply the strikethrough effect. Maybe this is not compatible with my material theme.
 
 We can use the HTML `<del>` tag to apply the strikethrough effect.
+
+huhuhuhu
 
 |         Style |         Syntax | Keyboard shortcut |                             Example | Output                            |
 | ------------: | -------------: | ----------------: | ----------------------------------: | --------------------------------- |
@@ -315,7 +317,11 @@ For more examples, see the [GitHub Flavored Markdown Spec](https://github.github
 
 ## Task lists
 
-> This feature is only available on GitHub, it will not work on MkDocs
+> Add these lines to the `mkdocs.yml` file to add the task lists support:
+> ```yml
+> markdown_extensions:
+>   - pymdownx.tasklist
+> ```
 
 To create a task list, preface list items with a **hyphen (-)** and space followed by `[ ]`. To mark a task as complete, use `[x]` or `[X]`.
 
@@ -332,6 +338,8 @@ To create a task list, preface list items with a **hyphen (-)** and space follow
 If a task list item description begins with a parenthesis, you'll need to escape it with \:
 
 `- [ ] \(Optional) Open a followup issue`
+
+- [ ] \(Optional) Open a followup issue
 
 ## Referencing issues and pull requests
 
@@ -390,9 +398,23 @@ The footnote will render like this:
 
 ![img](https://docs.github.com/assets/cb-27017/mw-1440/images/help/writing/footnote-rendered.webp)
 
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces. <br>This is a second line. You should use the `<br>` tag to switch to a new line in Mkdocs.
+
 > Note: The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown.
 > 
 > Footnotes are not supported in wikis.
+>
+> Add these lines to your `mkdocs.yml` to add the footnote support.
+> 
+> ```yml
+> markdown_extensions:
+>   - footnotes
+> ```
 
 ## Alerts
 
@@ -583,7 +605,7 @@ We recommend that the summary of a collapsed section be in one line.
 |    2 | C++       |
 |    3 | Java      |
 
-![img](/docs/img/1.png)
+![img](../img/1.png)
 
 > This is the quote
 
@@ -778,12 +800,685 @@ console.log("Hello, World!");
 
 ## Writing mathematical expressions
 
+### Writing inline expressions
+
+There are two options for delimiting a math expression inline with your text. You can either surround the expression with dollar symbols (`$`), or start the expression with `` $` `` and end it with `` `$ ``. The latter syntax is useful when the expression you are writing contains characters that overlap with markdown syntax.
+
+But it seems that only the `$` delimiter works fine in VScode.
+
+This sentence uses `$` delimiters to show math inline:$\sqrt{3x-1}+(1+x)^2$
+
+This sentence uses `` $` `` and `` `$ `` delimiters to show math inline:$`\sqrt{3x-1}+(1+x)^2`$
+
+### Writing expressions as blocks
+
+To add a math expression as a block, start a new line and delimit the expression with two dollar symbols `$$`.
+
+**The Cauchy-Schwarz Inequality**
+
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
+> Add these configuration to mkdocs.yml to activate the LaTeX support in Mkdocs
+>
+> ```yml
+> - pymdownx.arithmatex:
+>     generic: true
+> extra_javascript:
+> - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js
+> ```
+
+Alternatively, you can use the ` ```math ` code block syntax to display a math expression as a block.
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
+
+> You need to use `Markdown Preview Enhanced` to use the ` ```math` code block syntax in VScode.
+
+### Writing dollar signs in line with and within mathematical expressions
+
+To display a dollar sign as a character in the same line as a mathematical expression, you need to escape the non-delimiter `$` to ensure the line renders correctly.
+
+- Within a math expression, add a `\` symbol before the explicit `$`.
+
+  This expression uses `\$` to display a dollar sign: $\sqrt{\$4}$
+
+- Outside a math expression, but on the same line, use span tags around the explicit `$`.
+  
+  > You may need to use `\$`
+  
+  `To split <span>\$</span>100 in half, we calculate $100/2$`
+
+  To split <span>\$</span>100 in half, we calculate $100/2$.
+
+  To split \$100 in half, we calculate $100/2$.
+
+  The backtick `` ` `` may encounter the same problem as the `$`, and the way to solve the problem is the same.
+
+### Basic LaTeX torturial
+
+Please follow [this link](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
+If you want to use both the `$$` formula and the `$` formula, I would recommend you put the `$$` formula in a seperated line. If you use GitHub, there will not be any differences between this two ways, but if you use Mkdocs, you may encounter some unexpected errors in rendering.
+
+For example, I will recommend you write like this:
+
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: 
+
+$$\frac{3}{11}$$
+
+```LaTeX
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: 
+
+$$\frac{3}{11}$$
+```
+
+Instead of this:
+
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: 
+$$\frac{3}{11}$$
+
+```LaTeX
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: 
+$$\frac{3}{11}$$
+```
+
+Or this:
+
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: $$\frac{3}{11}$$
+
+```LaTeX
+Hello, this is a small fraction: $\frac{3}{11}$ and this is a big fraction: $$\frac{3}{11}$$
+```
+
+Although they look the same in GitHub.
+
+#### Fractions
+
+`\frac{numerator}{denominator}` will rendered like this: $\frac{numerator}{denominator}$ or 
+
+$$\frac{numerator}{denominator}$$
+
+Next are some examples.
+
+$\frac{3}{5}$
+
+Use `\binom{top}{bottom}` to render binomials. It will render like this: $\binom{top}{bottom}$ or 
+
+$$\binom{top}{bottom}$$
+
+Now I would like to render the famous equation —— binomial theorem.
+
+$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
+
+??? note "Original code"
+    `$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$`
+
+You can also use `a/b` $a/b$ for convenience.
+
+If you want to make the numerator and denominator rendered up and down separately, you can use the superscript and subscript just like this: `^a/_b` $^a/_b$. You can make it more tightened by using the negative space `\!` just like this: `^a\!/_b` $^a\!/_b$ or this: `^a\!/\!_b` $^a\!/\!_b$.
+
+These ways to render fractions without using the `\frac` are often used in the inline style (the `$` formula).
+
+LaTeX offers a basic fraction `\frac` and the continous fraction `\cfrac`.
+
+The usage of the `\cfrac` is the same as the `\frac`.
+
+If you are trying to render a nested big fraction, I would recommend you to use the `\cfrac` instead of the `\frac`. Below is an example:
+
+$$x=a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{a_4+\frac{1}{a_5+\dotsb}}}}}$$
+
+??? note "Original code"
+    ``$$x=a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{a_4+\frac{1}{a_5+\dotsb}}}}}$$``
+
+You will see the expression is becoming smaller and smaller, which makes it hard to see.
+
+If you use the `\cfrac`, it will look like this:
+
+$$x=a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{a_3+\cfrac{1}{a_4+\cfrac{1}{a_5+\dotsb}}}}}$$
+
+??? note "Original code"
+    ``$$x=a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{a_3+\cfrac{1}{a_4+\cfrac{1}{a_5+\dotsb}}}}}$$``
+
+The expression is not becoming smaller and smaller step by step using `\cfrac`.
+
+#### Roots
+
+Use `\sqrt{}` for square roots and `\sqrt[n]{}` for $n$th root.
+
+Examples:
+
+$$X(x_1, y_1) \qquad Y(x_2, y_2)$$
+
+$$d(X,\;Y)=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$$
+
+??? note "Original code"
+    ```LateX
+    $$X(x_1, y_1) \qquad Y(x_2, y_2)$$
+
+    $$d(X,\;Y)=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$$
+    ```
+
+$$\sqrt[n]{1+x+x^2+x^3+\dotsb}$$
+
+??? note "Original code"
+    `$$\sqrt[n]{1+x+x^2+x^3+\dotsb}$$`
+
+#### Sums and integrals
+
+The `\sum` and `\int` commands insert the sum and integral symbols respectively, with limits specified using the caret (`^`) and underscore (`_`).
+
+Examples:
+
+$\sum_{i=1}^{10}t_i$, $\int_{1}^{10}f(x)\,\mathrm{d}x$
+
+$$\sum_{i=1}^{10}t_i$$
+
+$$\int_{1}^{10}f(x)\,\mathrm{d}x$$
+
+!!! Note
+    `\infty` repersents $\infty$.
+
+You can use the `\limits` command to make the limits of an integral to be specified above and below the symbol:
+
+$$\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x\equiv\int\limits_0^\infty\mathrm{e}^{-x}\,\mathrm{d}x$$
+
+??? note "Original code"
+    `$$\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x\equiv\int\limits_0^\infty\mathrm{e}^{-x}\,\mathrm{d}x$$`
+
+If you have multiple lines in a limit, then use `\substack{}`, within the substack, use `\\` to switch to a new line.
+
+Examples:
+
+$$f'(x,\,y)=\frac{\partial^2f(x,\,y)}{\partial x\partial y}=\lim_{\substack{\left.\Delta x\,\rightarrow\,0^+\right.\\\left.\Delta y\,\rightarrow\,0^+\right.}}\frac{f(x+\Delta x,\,y+\Delta y)-f(x,\,y+\Delta y)-f(x+\Delta x,\,y)+f(x,\,y)}{\Delta x\Delta y}$$
+
+$$\sum_{\substack{0<i<m\\0<j<n}}P(i,\,j)$$
+
+#### Other "big" commands which operate in a similar manner with sums and integrals
+
+|   Commands   | After rendering |  Commands   | After rendering |
+| :----------: | :-------------: | :---------: | :-------------: |
+|    `\sum`    |     $\sum$      |   `\prod`   |     $\prod$     |
+|  `\coprod`   |    $\coprod$    | `\bigoplus` |   $\bigoplus$   |
+| `\bigotimes` |  $\bigotimes$   | `\bigodot`  |   $\bigodot$    |
+|   `bigcup`   |    $\bigcup$    |  `bigcap`   |    $\bigcap$    |
+| `\biguplus`  |   $\biguplus$   | `\bigsqcup` |   $\bigsqcup$   |
+|  `\bigvee`   |    $\bigvee$    | `\bigwedge` |   $\bigwedge$   |
+|    `\int`    |     $\int$      |   `\oint`   |     $\oint$     |
+|   `\iint`    |     $\iint$     |  `\iiint`   |    $\iiint$     |
+|  `\iiiint`   |    $\iiiint$    | `\idotsint` |   $\idotsint$   |
+
+#### Brackets, braces and delimiters
+
+10 delimiters in total.
+
+|      Before rendering       |       After rendering       |
+| :-------------------------: | :-------------------------: |
+|            `(a)`            |            $(a)$            |
+| `[b]` or `\lbrack b\rbrack` | $[b]$ or $\lbrack b\rbrack$ |
+|           `\{c\}`           |           $\{c\}$           |
+|          `\|d\|`*           |          $\|d\|$*           |
+|         `\\|e\\|`**         |         $\\|e\\|$**         |
+|     `\langle f\rangle`      |     $\langle f\rangle$      |
+|     `\lfloor g\rfloor`      |     $\lfloor g\rfloor$      |
+|      `\lceil h\rceil`       |      $\lceil h\rceil$       |
+|   `\ulcorner i\urcorner`    |   $\ulcorner i\urcorner$    |
+|       `/j\backslash`        |       $/j\backslash$        |
+
+> *: Before rendering, it's `|d|`.
+>
+> **: Before rendering, it's `\|e\|`.
+>
+> If you view the original code the Markdown at the * and ** place, you will see `\|d\|` instead of `|d|` at * and `\\|e\\|` instead of `\|e\|`. That's because I'm using the `|` in the table environment and all `|` should be replaced by `\|` in the table. In all other cases, you should just let the `|` as it is.
+>
+> Don't confuse the `\|d\|` in the table environment with `\|d\|` in other environments. The former one will be rendered as $|d|$ and the latter one will be $\|d\|$ WHILE YOU ARE USING GITHUB. **Mkdocs has a different strategy when rendering LaTeX formula in the table environment, you need to give it a try.**
+
+The effect in Visual Studio Code.
+
+<center><img alt="img" src="/img/6.png"></center>
+
+#### Automatic sizing
+
+Three commands: `\left`, `\right` and `\middle`.
+
+The three commands must be used with the 10 delimiters mentioned [above](#Brackets-braces-and-delimiters)
+
+**Without automatically sizing:**
+
+|     Before rendering      |      After rendering      |
+| :-----------------------: | :-----------------------: |
+|    `(\frac{x^2}{y^3})`    |    $(\frac{x^2}{y^3})$    |
+| `P(A=2\|\frac{A^2}{B}>4)` | $P(A=2\|\frac{A^2}{B}>4)$ |
+|   `\{\frac{x^2}{y^3}\}`   |   $\{\frac{x^2}{y^3}\}$   |
+|   `\frac{x^3}{3}\|^1_0`   |   $\frac{x^3}{3}\|^1_0$   |
+
+**With automatically sizing:**
+
+|               Before rendering               |               After rendering               |
+| :------------------------------------------: | :-----------------------------------------: |
+|        `\left(\frac{x^2}{y^3}\left)`         |       $\left(\frac{x^2}{y^3}\right)$        |
+| `P\left(A=2\middle\|\frac{A^2}{B}>4\right)`* | $P\left(A=2\middle\|\frac{A^2}{B}>4\right)$ |
+|            `\{\frac{x^2}{y^3}\}`             |      $\left\{\frac{x^2}{y^3}\right\}$       |
+|            `\frac{x^3}{3}\|^1_0`*            |      $\left.\frac{x^3}{3}\right\|^1_0$      |
+
+> *: There is an issue the same as [before](#Brackets-braces-and-delimiters), `|` or `\|` in the table environment.
+
+Using automatic sizing can make the formula more beautiful and clear.
+
+#### Manual sizing
+
+Four commands: `\big`, `\Big`, `\bigg` and `\Bigg`.
+
+You can also add `l` or `r` after the four commands above to form commands like `\bigl`, `\Biggr` and so on.
+
+`l` stands for left, `r` for right, and they are not necessary.
+
+The four commands must be used with the 10 delimiters mentioned [above](#Brackets-braces-and-delimiters).
+
+From `\big` to `\Bigg`, it is getting bigger and bigger.
+
+<center>( \big( \Big( \bigg( \Bigg(</center>
+
+$$\downarrow$$
+
+$$( \big( \Big( \bigg( \Bigg($$
+
+An example:
+
+$$\frac{\mathrm{d}}{\mathrm{d}x}(kg(x))=\frac{\mathrm{d}}{\mathrm{d}x}\big(kg(x)\big)=\frac{\mathrm{d}}{\mathrm{d}x}\Big(kg(x)\Big)=\frac{\mathrm{d}}{\mathrm{d}x}\bigg(kg(x)\bigg)=\frac{\mathrm{d}}{\mathrm{d}x}\Bigg(kg(x)\Bigg)$$
+
+??? note "Original code"
+    `$$\frac{\mathrm{d}}{\mathrm{d}x}(kg(x))=\frac{\mathrm{d}}{\mathrm{d}x}\big(kg(x)\big)=\frac{\mathrm{d}}{\mathrm{d}x}\Big(kg(x)\Big)=\frac{\mathrm{d}}{\mathrm{d}x}\bigg(kg(x)\bigg)=\frac{\mathrm{d}}{\mathrm{d}x}\Bigg(kg(x)\Bigg)$$`
+
+#### Matrices and arrays
+
+An example:
+
+$$A=\begin{pmatrix}a_{11}&a_{12}&a_{13}&\ldots&a_{1n}\\a_{21}&a_{22}&a_{23}&\ldots&a_{2n}\\a_{31}&a_{32}&a_{33}&\ldots&a_{3n}\\\vdots&\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&a_{n3}&\ldots&a_{nn}\\\end{pmatrix},tr(A)=\sum_{i=1}^na_{ii}$$
+
+Use an ampersand (`&`) to seprate the columns and a double backslash (`\\`) to new a row.
+
+| Environment name |   Surrounding delimiter    |                            Notes                             |
+| :--------------: | :------------------------: | :----------------------------------------------------------: |
+|      matrix      |                            |                  centers columns by default                  |
+|     matrix*      |                            | allows to specify alignment of columns in optional parameter |
+|     pmatrix      |   ${\displaystyle (\,)}$   |                  centers columns by default                  |
+|     pmatrix*     |   ${\displaystyle (\,)}$   | allows to specify alignment of columns in optional parameter |
+|     bmatrix      |   ${\displaystyle [\,]}$   |                  centers columns by default                  |
+|     bmatrix*     |   ${\displaystyle [\,]}$   | allows to specify alignment of columns in optional parameter |
+|     Bmatrix      |  ${\displaystyle \{\,\}}$  |                  centers columns by default                  |
+|     Bmatrix*     |  ${\displaystyle \{\,\}}$  | allows to specify alignment of columns in optional parameter |
+|     vmatrix      |  ${\displaystyle \|\,\|}$  |                  centers columns by default                  |
+|     vmatrix*     |  ${\displaystyle \|\,\|}$  | allows to specify alignment of columns in optional parameter |
+|     Vmatrix      | ${\displaystyle \\|\,\\|}$ |                  centers columns by default                  |
+|     Vmatrix*     | ${\displaystyle \\|\,\\|}$ | allows to specify alignment of columns in optional parameter |
+
+> There is an issue the same as [before](#Brackets-braces-and-delimiters), `|` or `\|` in the table environment.
+
+To specify alignment of columns in the table, use starred version:
+
+```LaTeX
+\begin{matrix*}[r]
+  -1 & 3 \\
+  2 & -4
+\end{matrix*}
+```
+
+The default choice is `c`.
+
+Markdown only supports basic LaTeX. Any matrix environment with `*` is not supported both on the GitHub platform and in Mkdocs.
+
+Three kinds of dots often used in matrices:
+
+`\cdots`, `\rdots` and `\ddots`.
+
+$\cdots$, $\vdots$ and $\ddots$
+
+In some cases, you may want to have finer control of the alignment within each column, or to insert lines between columns or rows. This can be achieved using the array environment. Here is an example:
+
+$$
+\begin{array}{|c|cc|}
+  1 & 2 &3\\ 
+  \hline
+  4 & 5 &6\\
+  7 & 8 &9\\
+  \hline
+\end{array}
+$$
+
+??? note "Original code"
+    `\begin{array}{cc|c}1 & 2 &3\\ \hline 4 & 5 &6\\7 & 8 &9\end{array}`
+
+Use `\hline` to add a horizonal line. You should use `\\` to switch to a new line before using `\hline` but you should not add `\\` after the `\hline` because it will switch to a new line automatically.
+
+Add `|` between `c` in the `{}` to specify the position of the vertical line. Example: when there are 3 columns, `{c|cc}` will render a vertical line between the first and the second column and `{cc|c}` will render a vertical line between the second and the third column. You can also add multiple vertical lines.
+
+But using the `array` environment, you can't warp your matrix in parentheses or brackets.
+
+After each `\\`, you can specify the distance between the lines by adding the distance you want warpped in a pair of brackets.
+
+**Without specifying the distance (a little tightened):**
+
+$$
+M = \begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\
+       \frac{5}{6} & 0           & \frac{1}{6} \\
+       0           & \frac{5}{6} & \frac{1}{6}
+     \end{bmatrix}
+$$
+
+??? note "Original code"
+    `M = \begin{bmatrix}\frac{5}{6} & \frac{1}{6} & 0 \\ \frac{5}{6} & 0 & \frac{1}{6} \\ 0 & \frac{5}{6} & \frac{1}{6}\end{bmatrix}`
+
+**Specifying the distance to 0.3em (much more loose):**
+
+$$
+M = \begin{bmatrix}
+       \frac{5}{6} & \frac{1}{6} & 0           \\[0.3em]
+       \frac{5}{6} & 0           & \frac{1}{6} \\[0.3em]
+       0           & \frac{5}{6} & \frac{1}{6}
+     \end{bmatrix}
+$$
+
+??? note "Original code"
+    `M = \begin{bmatrix}\frac{5}{6} & \frac{1}{6} & 0 \\[0.3em] \frac{5}{6} & 0 & \frac{1}{6} \\[0.3em] 0 & \frac{5}{6} & \frac{1}{6}\end{bmatrix}`
+
+If you need "border" or "indexes" on your matrix, plain TeX provides the macro `\bordermatrix`, but it is not available in either GitHub or Mkdocs.
+
+You can use the macro like this:
+
+```TeX
+M = \bordermatrix{~ & x & y \cr
+                  A & 1 & 0 \cr
+                  B & 0 & 1 \cr}
+```
+
+To insert a small matrix without increasing leading in the line containing it, use `smallmatrix` environment:
+
+You should use the smallmatrix environment along with the `\big(` and other similar commands.
+
+Example:
+
+A matrix in text must be set smaller A matrix in text must be set smaller A matrix in text must be set smaller:$\bigl(\begin{smallmatrix}a&b \\ c&d\end{smallmatrix} \bigr)$to not increase leading in a portion of text to not increase leading in a portion of textto not increase leading in a portion of text.
+
+$$\bigl(\begin{smallmatrix}a&b \\ c&d\end{smallmatrix} \bigr)$$
+
+#### Adding text to equations
+
+Use `\text` to display text within a LaTeX formula.
+
+If you want additional features, use `\textrm`, `\textit`, `\textbf`, etc. `\textit` will produce italic words and `textbf` will produce bold font and `\textrm` uses the roman font.
+
+|                LaTeX command                 |                  Sample                   |                   Description                    | Common use                                                                                                                                                                                                                                                                                                                                                                            |
+| :------------------------------------------: | :---------------------------------------: | :----------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `\mathnormal{…}`(or simply omit any command) | $\mathnormal{ABCDEF\;\,abcdef\;\,123456}$ |              The default math font               | Most mathematical notation                                                                                                                                                                                                                                                                                                                                                            |
+|                 `\mathrm{…}`                 |   $\mathrm{ABCDEF\;\,abcdef\;\,123456}$   | This is the default or normal font, unitalicised | Units of measurement, one word functions                                                                                                                                                                                                                                                                                                                                              |
+|                 `\mathit{…}`                 |   $\mathit{ABCDEF\;\,abcdef\;\,123456}$   |                 Italicised font                  | Multi-letter function or variable names. Compared to `\mathnormal`, words are spaced more naturally and numbers are italicized as well.                                                                                                                                                                                                                                               |
+|                 `\mathbf{…}`                 |   $\mathbf{ABCDEF\;\,abcdef\;\,123456}$   |                    Bold font                     | Vectors                                                                                                                                                                                                                                                                                                                                                                               |
+|                 `\mathsf{…}`                 |   $\mathsf{ABCDEF\;\,abcdef\;\,123456}$   |                    Sans-serif                    | Categories                                                                                                                                                                                                                                                                                                                                                                            |
+|                 `\mathtt{…}`                 |   $\mathtt{ABCDEF\;\,abcdef\;\,123456}$   |           Monospace (fixed-width) font           |                                                                                                                                                                                                                                                                                                                                                                                       |
+|                `\mathfrak{…}`                |  $\mathfrak{ABCDEF\;\,abcdef\;\,123456}$  |                     Fraktur                      | Almost canonical font for Lie algebras, ideals in ring theory                                                                                                                                                                                                                                                                                                                         |
+|                `\mathcal{…}`                 |            $\mathcal{ABCDEF}$             |           Calligraphy (uppercase only)           | Often used for sheaves/schemes and categories, used to denote cryptological concepts like an *alphabet of definition* ($\mathcal{A}$), *message space* ($\mathcal{M}$), *ciphertext space* ($\mathcal{C}$) and *key space* ($\mathcal{K}$); Kleene's ($\mathcal{O}$); naming convention in description logic; Laplace transform ($\mathcal{L}$) and Fourier transform ($\mathcal{F}$) |
+|                 `\mathbb{…}`                 |             $\mathbb{ABCDEF}$             |         Blackboard bold (uppercase only)         | Used to denote special sets (e.g. real numbers)                                                                                                                                                                                                                                                                                                                                       |
+|                `\mathscr{…}`                 |            $\mathscr{ABCDEF}$             |             Script (uppercase only)              | An alternative font for categories and sheaves.                                                                                                                                                                                                                                                                                                                                       |
+
+!!! Tips
+    `\mathnormal{…}` is not supported in Mkdocs but is supported in GitHub.<br>These formatting commands can be wrapped around the entire equation, and not just on the textual elements: they only format letters, numbers, and uppercase Greek, and other math commands are unaffected.
+
+To bold lowercase Greek or other symbols, you can use the `\boldsymbol` command; this will only work if there exists a bold version of the symbol in the current font.
+
+As a last resort there is the `\pmb` command (poor man's bold): this prints multiple versions of the character slightly offset against each other.
+
+Example:
+
+$$\pmb{\beta} = (\beta_1,\beta_2,\dotsc,\beta_n)$$
+
+!!! Tip
+    `\boldsymbol` is not supported in Markdown but is supported in Mkdocs.
+
+#### Some accents
+
+|        Command         |         Effect         |       Command        |        Effect        |
+| :--------------------: | :--------------------: | :------------------: | :------------------: |
+|  `a'` or `a^{\prime}`  |  $a'$ or $a^{\prime}$  |        `a''`         |        $a''$         |
+|       `\hat{a}`        |       $\hat{a}$        |      `\bar{a}`       |      $\bar{a}$       |
+|      `\grave{a}`       |      $\grave{a}$       |     `\acute{a}`      |     $\acute{a}$      |
+|       `\dot{a}`        |       $\dot{a}$        |      `\ddot{a}`      |      $\ddot{a}$      |
+|       `\not{a}`        |       $\not{a}$        |    `\mathring{a}`    |    $\mathring{a}$    |
+| `\overrightarrow{AB}`  | $\overrightarrow{AB}$  | `\overleftarrow{AB}` | $\overleftarrow{AB}$ |
+|         `a'''`         |         $a'''$         |       `a''''`        |       $a''''$        |
+|    `\overline{aaa}`    |    $\overline{aaa}$    |     `\check{a}`      |     $\check{a}$      |
+|      `\breve{a}`       |      $\breve{a}$       |      `\vec{a}`       |      $\vec{a}$       |
+|      `\dddot{a}`       |      $\dddot{a}$       |     `\ddddot{a}`     |     $\ddddot{a}$     |
+|    `\widehat{AAA}`     |    $\widehat{AAA}$     |  `\widetilde{AAA}`   |  $\widetilde{AAA}$   |
+| `\stackrel\frown{AAA}` | $\stackrel\frown{AAA}$ |     `\tilde{a}`      |     $\tilde{a}$      |
+|    `\underline{a}`     |    $\underline{a}$     |                      |                      |
+
+`\prime` will render the same as `'`.
+
+`\ddddot{}` will render the most `·` in number. There is not a commend like <del>"\dddddot{}"</del>.
+
+#### Color
+
+$k = {\color{red}x} \mathbin {\color{blue}-} 2$
+
+The only problem is that this disrupts the default LaTeX formatting around the - operator. To fix this, we enclose it in a `\mathbin` environment, since `-` is a binary operator.
+
+#### Plus and minus signs
+
+`\pm` $\rightarrow \pm$
+
+`\mp` $\rightarrow \mp$
+
+LaTeX deals with the `+` and `−` signs in two possible ways. The most common is as a binary operator. When two maths elements appear on either side of the sign, it is assumed to be a binary operator, and as such, allocates some space to either side of the sign. The alternative way is a sign designation. This is when you state whether a mathematical quantity is either positive or negative. This is common for the latter, as in math, such elements are assumed to be positive unless a `−` is prefixed to it. In this instance, you want the sign to appear close to the appropriate element to show their association. If you put a `+` or a `−` with nothing before it but you want it to be handled like a binary operator you can add an *invisible* character before the operator using `{}`. This can be useful if you are writing multiple-line formulas, and a new line could start with a `−` or `+`, for example, then you can fix some strange alignments adding the invisible character where necessary.
+
+#### Controlling horizontal spacing
+
+$$f(n) =
+  \begin{cases}
+    n/2       & \quad \text{if } n \text{ is even}\\
+    -(n+1)/2  & \quad \text{if } n \text{ is odd}
+  \end{cases}
+$$
+
+??? note "Original code"
+    `f(n) = \begin{cases} n/2 & \quad \text{if } n \text{ is even} \\ -(n+1)/2 & \quad \text{if } n \text{ is odd} \end{cases}`
+
+`cases` environment usage.
+
+LaTeX has defined two commands that can be used anywhere in documents (not just `maths`) to insert some horizontal space. They are `\quad` and `\qquad`.
+
+A `\quad` is a space equal to the current font size and the `\qquad` gives twice that amount.
+
+| Command |  Description   |      Size       |
+| :-----: | :------------: | :-------------: |
+|  `\,`   |  small space   | 3/18 of a quad  |
+|  `\:`   |  medium space  | 4/18 of a quad  |
+|  `\;`   |  large space   | 5/18 of a quad  |
+|  `\!`   | negative space | -3/18 of a quad |
+
+NB you can use more than one command in a sequence to achieve a greater space if necessary.
+
+!!! Tip
+    NB, N.B., nb and n.b. is the abbrviation of `nota bene` (/ˈnoʊtə ˈbɛneɪ/, /ˈnoʊtə ˈbɛni/ or /ˈnoʊtə ˈbiːni/; plural: notate bene) in Latin.[^3] Here `NB` is used to draw the reader's attention.
+
+[^3]: According to [Wikipedia](https://en.wikipedia.org/wiki/Nota_bene).
+
+#### Manually Specifying Formula Style
+
+To manually display a fragment of a formula using text style, surround the fragment with curly braces and prefix the fragment with `\textstyle`. E.g. `{\textstyle \sum_k}`
+
+To display part of a formula using display style, do the same thing, but use `\displaystyle` instead.
+
+#### Dots in formulas
+
+|      Code      |     Output     | Comment                                                                                                                                                                                     |
+| :------------: | :------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|    `\dots`     |    $\dots$     | generic dots (ellipsis), to be used in text (outside formulae as well). It automatically manages whitespaces before and after itself according to the context, it's a higher level command. |
+|    `\ldots`    |    $\ldots$    | the output is similar to the previous one, but there is no automatic whitespace management; it works at a lower level.                                                                      |
+|    `\cdots`    |    $\cdots$    | These dots are centered relative to the height of a letter. There is also the binary multiplication operator, \cdot, mentioned below.                                                       |
+|    `\vdots`    |    $\vdots$    | vertical dots                                                                                                                                                                               |
+|    `\ddots`    |    $\ddots$    | diagonal dots                                                                                                                                                                               |
+|   `\iddots`    |   $\iddots$    | inverse diagonal dots (requires the mathdots package)                                                                                                                                       |
+| `\hdotsfor{n}` | $\hdotsfor{n}$ | to be used in matrices, it creates a row of dots spanning *n* columns.                                                                                                                      |
+
+!!! Tip
+    `\iddots` and `\hdotsfor{n}` are not supported in both GitHub and Mkdocs.
+
+Instead of using `\ldots` and `\cdots`, you should use the semantically oriented commands. It makes it possible to adapt your document to different conventions on the fly, in case (for example) you have to submit it to a publisher who insists on following house tradition in this respect. The default treatment for the various kinds follows American Mathematical Society conventions.
+
+|       Code        |      Output       | Comment                                    |
+| :---------------: | :---------------: | :----------------------------------------- |
+| `A_1,A_2,\dotsc,` | $A_1,A_2,\dotsc,$ | for "dots with commas"                     |
+| `A_1+\dotsb+A_N`  | $A_1+\dotsb+A_N$  | for "dots with binary operators/relations" |
+| `A_1 \dotsm A_N`  | $A_1 \dotsm A_N$  | for "multiplication dots"                  |
+| `\int_a^b \dotsi` | $\int_a^b \dotsi$ | for "dots with integrals"                  |
+|  `A_1\dotso A_N`  |  $A_1\dotso A_N$  | for "other dots" (none of the above)       |
+
+#### List of mathematical symbols
+
+**<center>Relation Symbols</center>**
+
+|    Symbol    |    Script    |    Symbol    |    Script    |  Symbol   |  Script   |      Symbol       |      Script       |      Symbol      |      Script      |
+| :----------: | :----------: | :----------: | :----------: | :-------: | :-------: | :---------------: | :---------------: | :--------------: | :--------------: |
+|     $<$      |     `<`      |     $>$      |     `>`      |    $=$    |    `=`    |    $\parallel$    |    `\parallel`    |   $\nparallel$   |   `\nparallel`   |
+|    $\leq$    |    `leq`     |    $\geq$    |    `\geq`    | $\doteq$  | `\doteq`  |     $\asymp$      |     `\asymp`      |    $\bowtie$     |    `\bowtie`     |
+|    $\ll$     |    `\ll`     |    $\gg$     |    `\gg`     | $\equiv$  | `\equiv`  |     $\vdash$      |     `\vdash`      |     $\dashv$     |     `\dashv`     |
+|  $\subset$   |  `\subset`   |  $\supset$   |  `\supset`   | $\approx$ | `\approx` |       $\in$       |       `\in`       |      $\ni$       |      `\ni`       |
+| $\subseteq$  | `\subseteq`  | $\supseteq$  | `\supseteq`  |  $\cong$  |  `\cong`  |     $\smile$      |     `\smile`      |     $\frown$     |     `\frown`     |
+| $\nsubseteq$ | `\nsubseteq` | $\nsupseteq$ | `\nsupseteq` | $\simeq$  | `\simeq`  |     $\models$     |     `\models`     |     $\notin$     |     `\notin`     |
+| $\sqsubset$  | `\sqsubset`  | $\sqsupset$  | `\sqsupset`  |  $\sim$   |  `\sim`   |      $\perp$      |      `\perp`      |      $\mid$      |      `\mid`      |
+|  $\preceq$   |  `\preceq`   |  $\succeq$   |  `\succeq`   |  $\neq$   |  `\neq`   | $\sphericalangle$ | `\sphericalangle` | $\measuredangle$ | `\measuredangle` |
+| $\therefore$ | `\therefore` |  $\because$  |  `\because`  |           |           |                   |                   |                  |                  |
+
+**<center>Binary Operations</center>**
+
+|   Symbol   |   Script   |  Symbol  |  Script  |       Symbol       |       Script       |   Symbol    |   Script    |
+| :--------: | :--------: | :------: | :------: | :----------------: | :----------------: | :---------: | :---------: |
+|   $\pm$    |   `\pm`    |  $\cap$  |  `\cap`  |     $\diamond$     |     `\diamond`     |  $\oplus$   |  `\oplus`   |
+|   $\mp$    |   `\mp`    |  $\cup$  |  `\cup`  |  $\bigtriangleup$  |  `\bigtriangleup`  |  $\ominus$  |  `\ominus`  |
+|  $\times$  |  `\times`  | $\uplus$ | `\uplus` | $\bigtriangledown$ | `\bigtriangledown` |  $\otimes$  |  `\otimes`  |
+|   $\div$   |   `\div`   | $\sqcap$ | `\sqcap` |  $\triangleleft$   |  `\triangleleft`   |  $\oslash$  |  `\oslash`  |
+|   $\ast$   |   `\ast`   | $\sqcup$ | `\sqcup` |  $\triangleright$  |  `\triangleright`  |   $\odot$   |   `\odot`   |
+|  $\star$   |  `\star`   |  $\vee$  |  `\vee`  |     $\bigcirc$     |     `\bigcirc`     |   $\circ$   |   `\circ`   |
+| $\dagger$  | `\dagger`  | $\wedge$ | `\wedge` |     $\bullet$      |     `\bullet`      | $\setminus$ | `\setminus` |
+| $\ddagger$ | `\ddagger` | $\cdot$  | `\cdot`  |       $\wr$        |       `\wr`        |  $\amalg$   |  `\amalg`   |
+
+**<center>Set and/or Logic Notation</center>**
+
+|   Symbol   |   Script   |            Symbol             |                       Script                        |
+| :--------: | :--------: | :---------------------------: | :-------------------------------------------------: |
+| $\exists$  | `\exists`  |             $\to$             |               `\rightarrow` or `\to`                |
+| $\nexists$ | `\nexists` |            $\gets$            |               `\leftarrow` or `\gets`               |
+| $\forall$  | `\forall`  |           $\mapsto$           |                      `\mapsto`                      |
+|   $\neg$   |   `\neg`   |          $\implies$           |                     `\implies`                      |
+|   $\cap$   |   `\cap`   |                               |                                                     |
+|   $\cup$   |   `\cup`   |                               |                                                     |
+| $\subset$  | `\subset`  |         $\impliedby$          |                    `\impliedby`                     |
+| $\supset$  | `\supset`  |         $\Rightarrow$         |                    `\Rightarrow`                    |
+|   $\in$    |   `\in`    |          $\implies$           |                  `\leftrightarrow`                  |
+|  $\notin$  |  `\notin`  |            $\iff\$            |                       `\iff`                        |
+|   $\ni$    |   `\ni`    |       $\Leftrightarrow$       | `\Leftrightarrow` (preferred for equivalence (iff)) |
+|  $\land$   |  `\land`   |            $\top$             |                       `\top`                        |
+|   $\lor$   |   `\lor`   |            $\bot$             |                       `\bot`                        |
+|  $\angle$  |  `\angle`  | $\emptyset$ and $\varnothing$ |            `\emptyset` and `\varnothing`            |
+|            |            |     $\rightleftharpoons$      |                `\rightleftharpoons`                 |
+
+**<center>Delimiters</center>**
+
+|    Symbol    |                 Script                 |    Symbol    |    Script    |  Symbol   |  Script   |    Symbol    |    Script    |
+| :----------: | :------------------------------------: | :----------: | :----------: | :-------: | :-------: | :----------: | :----------: |
+|    $\mid$    | `\|` or `\mid` (difference in spacing) |    $\\|$     |    `\\|`     |    $/$    |    `/`    | $\backslash$ | `\backslash` |
+|     $\{$     |                  `\{`                  |     $\}$     |     `\}`     | $\langle$ | `\langel` |  $\rangle$   |  `\rangle`   |
+|  $\uparrow$  |               `\uparrow`               |  $\Uparrow$  |  `\Uparrow`  | $\lceil$  | `\lceil`  |   $\rceil$   |   `\rceil`   |
+| $\downarrow$ |              `\downarrow`              | $\Downarrow$ | `\Downarrow` | $\lfloor$ | `\lfloor` |  $\rfloor$   |  `\rfloor`   |
+
+!!! Tip
+    You can use `\stackrel{}` command to display something right upon a sign. E.g. use `\stackrel{\triangle}=` to display this: $\stackrel{\triangle}\rightleftharpoons$.
+
+**<center>Greek Letters</center>**
+
+|               Symbol               |               Script               |               Symbol               |               Script               |
+| :--------------------------------: | :--------------------------------: | :--------------------------------: | :--------------------------------: |
+|          $A$ and $\alpha$          |          `A` and `\alpha`          |           $N$ and $\nu$            |           `N` and `\nu`            |
+|          $B$ and $\beta$           |          `B` and `\beta`           |          $\Xi$ and $\xi$           |          `\Xi` and `\xi`           |
+|       $\Gamma$ and $\gamma$        |       `\Gamma` and `\gamma`        |            $O$ and $o$             |            `O` and `o`             |
+|       $\Delta$ and $\delta$        |       `\Delta` and `\delta`        |     $\Pi$, $\pi$ and $\varpi$      |     `\Pi`, `\pi` and `\varpi`      |
+| $E$, $\epsilon$ and $\varepsilon$  | `E`, `\epsilon` and `\varepsilon`  |     $P$, $\rho$ and $\varrho$      |     `P`, `\rho` and `\varrho`      |
+|          $Z$ and $\zeta$           |          `Z` and `\zeta`           | $\Sigma$, $\sigma$ and $\varsigma$ | `\Sigma`, `\sigma` and `\varsigma` |
+|           $H$ and $\eta$           |           `H` and `\eta`           |           $T$ and $\tau$           |           `T` and `\tau`           |
+| $\Theta$, $\theta$ and $\vartheta$ | `\Theta`, `\theta` and `\vartheta` |   $Y$, $\Upsilon$ and $\upsilon$   |   `Y`, `\Upsilon` and `\upsilon`   |
+|          $I$ and $\iota$           |          `I` and `\iota`           |    $\Phi$, $\phi$ and $\varphi$    |    `\Phi`, `\phi` and `\varphi`    |
+|   $K$, $\kappa$ and $\varkappa$    |   `K`, `\kappa` and `\varkappa`    |           $X$ and $\chi$           |           `X` and `\chi`           |
+|      $\Lambda$ and $\lambda$       |      `\Lambda` and `\lambda`       |         $\Psi$ and $\psi$          |         `\Psi` and `\psi`          |
+|           $M$ and $\mu$            |           `\M` and `\mu`           |       $\Omega$ and $\omega$        |       `\Omega` and `\omega`        |
+
+!!! Warning "Note"
+    To use the Greek Letters in LaTeX that have the same appearance in the Latin alphabet, just use Latin: e.g., A instead of Alpha, B instead of Beta, etc.
+
+**<center>Other symbols</center>**
+
+|   Symbol   |   Script   |  Symbol  |  Script  | Symbol | Script |  Symbol  |  Script  |  Symbol  |  Script  |
+| :--------: | :--------: | :------: | :------: | :----: | :----: | :------: | :------: | :------: | :------: |
+| $\partial$ | `\partial` | $\imath$ | `\imath` | $\Re$  | `\Re`  | $\nabla$ | `\nabla` | $\aleph$ | `\aleph` |
+|   $\eth$   |   `\eth`   | $\jmath$ | `\jmath` | $\Im$  | `\Im`  |  $\Box$  |  `\Box`  | $\beth$  | `\beth`  |
+|  $\hbar$   |  `\hbar`   |  $\ell$  |  `\ell`  | $\wp$  | `\wp`  | $\infty$ | `\infty` | $\gimel$ | `\gimel` |
+
+**<center>Trigonometric Functions</center>**
+
+| Symbol | Script |   Symbol   |  Script   | Symbol  | Script  | Symbol | Script |
+| :----: | :----: | :--------: | :-------: | :-----: | :-----: | :----: | :----: |
+| $\sin$ | `\sin` | $\arcsin$  | `\arcsin` | $\sinh$ | `\sinh` | $\sec$ | `\sec` |
+| $\cos$ | `\cos` | $\arccos$  | `\arccos` | $\cosh$ | `\cosh` | $\csc$ | `\csc` |
+| $\tan$ | `\tan` | $\arctan$  | `\arctan` | $\tanh$ | `\tanh` |        |        |
+| $\cot$ | `\cot` | $\arccot$* | `\arccot` | $\coth$ | `\coth` |        |        |
+
+*: `\arccot` is not defined in Markdown or Mkdocs.
+
+For more advanced feature, please visit [this link](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics).
+
+Some practices:
+
+$$
+\lim_{x\to0}\frac{\mathrm{e}^x-1}{2x}\underset{\mathrm{H}}{\overset{\big[\frac{0}{0}\big]}{=}}\lim_{x\to0}\frac{\mathrm{e}^x}{2}=\frac{1}{2}
+$$
+
+$$
+a=
+\begin{cases}
+\displaystyle \int x\,\mathrm{d}x\\
+b^2
+\end{cases}
+$$
+
+$$
+f(x)=
+\begin{cases}
+x & \text{when }x\text{ is even}\\
+-x & \text{when }x\text{ is odd}\\
+\end{cases}
+$$
+
+$$
+\left.\begin{aligned}
+B'=-\partial\times E,\\
+E'=\partial\times B-4\pi j,
+\end{aligned}\right\}\quad\text{Maxwell's equations}
+$$
+
+$$
+\begin{gather*}
+a_0=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\,\mathrm{d}x\\
+a_n=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\cos nx\,\mathrm{d}x
+\end{gather*}
+$$
+
 ---
 
-This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). 
+This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and [LaTeX Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Mathematics). 
 
 The author has made some edits.
 
 Author: Morgan Willow Chen
 
-Last updated 07/06/2024
+Last updated 07/26/2024
