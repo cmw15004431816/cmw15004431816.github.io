@@ -1,4 +1,9 @@
-# Basic writing and formatting syntax
+# Basic writing and formatting syntax for Markdown and LaTeX
+
+!!! Note "Before reading..."
+    This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), [LaTeX Wikibooks(basic)](https://en.wikibooks.org/wiki/LaTeX/Mathematics) and [LaTeX Wikibooks(advanced)](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics). 
+    
+    You can visit these websites and learn. The author has made some edits to make them easier to understand and learn. There may be some errors in this documentation and many contents on the three websites have been removed for simplicity. If you would like to see the original full documentation, please visit the links which I have provided above.
 
 Create sophisticated formatting for your prose and code on GitHub with simple syntax.
 
@@ -1475,10 +1480,10 @@ $$
 
 ---
 
-This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) and [LaTeX Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Mathematics). 
+This article is created from [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), [LaTeX Wikibooks(basic)](https://en.wikibooks.org/wiki/LaTeX/Mathematics) and [LaTeX Wikibooks(advanced)](https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics). 
 
 The author has made some edits.
 
 Author: Morgan Willow Chen
 
-Last updated 07/26/2024
+Last updated 08/11/2024
