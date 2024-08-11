@@ -1,9 +1,11 @@
 # How to suppress the DRC errors in VIVADO 2024.1
 
-!!! Warning
-    ${\color{red}\text{Before you follow my instructions, you should get a full understanding of the risks of doing this.}}$
-    
+!!! Warning "WARNING: READ THIS BEFORE CONTINUING"
+    <p style="color: red;">Before you follow my instructions, you should get a full understanding of the risks of doing this.</p>
+
     If you are not sure about the risks, first read the [Appendix](#appendix-risks-of-suppressing-drc-errors) section of this blog.
+
+    <p style="color: red; font-weight: bold;">If you suffer any loss following the instructions in this article, the author of this article DOES NOT assume ANY responsibility.</p>
 
 ## Background
 
@@ -89,7 +91,7 @@ Next, go to VIVADO. Look at the left sidebar. Under the `Project Manager` click 
 After that, you can try `Generate Bitstream`, and the problem should be solved.
 
 !!! Warning
-    [Allowing bitstream creation with unspecified I/O standard values (suppressing the DRC error)](#1) is not recommended. ${\color{red}\text{Only follow my instructions after fully understanding the risks.}}$
+    [Allowing bitstream creation with unspecified I/O standard values (suppressing the DRC error)](#1) is not recommended. <p style="color: red;">Only follow my instructions after FULLY understanding the risks.</p>
 
 ## Appendix: Risks of suppressing DRC errors
 
@@ -140,3 +142,11 @@ In certain situations, you may consider suppressing DRC errors, but these should
 **Conclusion**
 
 While suppressing DRC errors might be tempting to quickly move forward in the design process, it's important to consider the potential consequences. Careful analysis and testing should accompany any decision to suppress DRC errors, and efforts should be made to resolve the underlying issues instead. Proper design practices and adherence to DRC guidelines are crucial for achieving a reliable and high-performance FPGA implementation.
+
+[Back to top](#background)
+
+---
+
+Author: Morgan Willow Chen
+
+Last updated 08/11/2024
