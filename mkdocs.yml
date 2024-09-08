@@ -8,6 +8,7 @@ nav:
       - learning-record/Basic-writing-and-formatting-syntax.md
   - Useful tips:
       - "This is a useful tip on using VIVADO 2024.1": useful-tips/VIVADO.md
+      - "This is a useful tip on garbled compressed file names": useful-tips/Compressed-file-name-is-garbled.md
   - Page 1(testing):
       - section/1.md
       - "2": 2.md
