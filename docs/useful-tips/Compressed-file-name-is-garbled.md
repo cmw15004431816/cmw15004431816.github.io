@@ -75,7 +75,7 @@ First, you need to get to know the **country or region** setting on the computer
 If you use the [First way](#first-way-not-recommend), just change your **country or region** to match the source computer. If you don't know, you can just ask your friend who sent the zipped file to you. For the [second way](#second-way) you can select encoding in WinRAR according to the **country or region** setting of the source computer or try every encoding in WinRAR until the file names are displayed correctly.
 
 !!! note
- The encoding you should choose depends on the **country or region** setting of the source computer, instead of the actual language of the file name.
+    The encoding you should choose depends on the **country or region** setting of the source computer, instead of the actual language of the file name.
 
 I will give some examples down below:
 
