@@ -1,0 +1,3460 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="This is the blog of Morgan Willow Chen." name="description"/>
+<link href="https://cmw15004431816.link/learning-record/Basic-writing-and-formatting-syntax/" rel="canonical"/>
+<link href="../.." rel="prev"/>
+<link href="../../useful-tips/VIVADO/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Basic writing and formatting syntax for Markdown and LaTeX - Morgan Willow Chen's Blog (under construction)</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="website" property="og:type"/>
+<meta content="Basic writing and formatting syntax for Markdown and LaTeX - Morgan Willow Chen's Blog (under construction)" property="og:title"/>
+<meta content="This is the blog of Morgan Willow Chen." property="og:description"/>
+<meta content="https://cmw15004431816.link/assets/images/social/learning-record/Basic-writing-and-formatting-syntax.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://cmw15004431816.link/learning-record/Basic-writing-and-formatting-syntax/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Basic writing and formatting syntax for Markdown and LaTeX - Morgan Willow Chen's Blog (under construction)" name="twitter:title"/>
+<meta content="This is the blog of Morgan Willow Chen." name="twitter:description"/>
+<meta content="https://cmw15004431816.link/assets/images/social/learning-record/Basic-writing-and-formatting-syntax.png" name="twitter:image"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#basic-writing-and-formatting-syntax-for-markdown-and-latex">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Morgan Willow Chen's Blog (under construction)" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Morgan Willow Chen's Blog (under construction)">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Morgan Willow Chen's Blog (under construction)
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Basic writing and formatting syntax for Markdown and LaTeX
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: slate)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="../.." hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="/zh-TW/" hreflang="zh-TW">
+              正體中文
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+  
+    
+  
+  Learning record
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../useful-tips/VIVADO/">
+          
+  
+  
+    
+  
+  Useful tips
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../section/1/">
+          
+  
+  
+    
+  
+  Page 1(testing)
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../section/2/">
+          
+  
+  
+    
+  
+  Page 2(testing)
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Morgan Willow Chen's Blog (under construction)" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Morgan Willow Chen's Blog (under construction)">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Morgan Willow Chen's Blog (under construction)
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Learning record
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Learning record
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Basic writing and formatting syntax for Markdown and LaTeX
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Basic writing and formatting syntax for Markdown and LaTeX
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headings">
+<span class="md-ellipsis">
+      Headings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styling-text">
+<span class="md-ellipsis">
+      Styling text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quoting-text">
+<span class="md-ellipsis">
+      Quoting text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quoting-code">
+<span class="md-ellipsis">
+      Quoting code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-color-models">
+<span class="md-ellipsis">
+      Supported color models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#links">
+<span class="md-ellipsis">
+      Links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-links">
+<span class="md-ellipsis">
+      Section links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relative-links">
+<span class="md-ellipsis">
+      Relative links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#images">
+<span class="md-ellipsis">
+      Images
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-the-theme-an-image-is-shown-to">
+<span class="md-ellipsis">
+      Specifying the theme an image is shown to
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+<span class="md-ellipsis">
+      Lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-lists">
+<span class="md-ellipsis">
+      Nested Lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-lists">
+<span class="md-ellipsis">
+      Task lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-issues-and-pull-requests">
+<span class="md-ellipsis">
+      Referencing issues and pull requests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-issues-and-pull-requests_1">
+<span class="md-ellipsis">
+      Referencing issues and pull requests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-external-resources">
+<span class="md-ellipsis">
+      Referencing external resources
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uploading-assets">
+<span class="md-ellipsis">
+      Uploading assets
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-emojis">
+<span class="md-ellipsis">
+      Using emojis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paragraphs">
+<span class="md-ellipsis">
+      Paragraphs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnotes">
+<span class="md-ellipsis">
+      Footnotes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alerts">
+<span class="md-ellipsis">
+      Alerts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hiding-content-with-comments">
+<span class="md-ellipsis">
+      Hiding content with comments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ignoring-markdown-formatting">
+<span class="md-ellipsis">
+      Ignoring Markdown formatting
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disabling-markdown-rendering">
+<span class="md-ellipsis">
+      Disabling Markdown rendering
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-table">
+<span class="md-ellipsis">
+      Creating a table
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-collapsed-section">
+<span class="md-ellipsis">
+      Creating a collapsed section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-mermaid-diagrams">
+<span class="md-ellipsis">
+      Create Mermaid diagrams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#several-mkdocs-features">
+<span class="md-ellipsis">
+      Several MkDocs features
+    </span>
+</a>
+<nav aria-label="Several MkDocs features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonition">
+<span class="md-ellipsis">
+      Admonition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxdetails">
+<span class="md-ellipsis">
+      Pymdownx.details
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxsmartsymbols">
+<span class="md-ellipsis">
+      Pymdownx.smartsymbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxtabbed">
+<span class="md-ellipsis">
+      Pymdownx.tabbed
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-mathematical-expressions">
+<span class="md-ellipsis">
+      Writing mathematical expressions
+    </span>
+</a>
+<nav aria-label="Writing mathematical expressions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-inline-expressions">
+<span class="md-ellipsis">
+      Writing inline expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-expressions-as-blocks">
+<span class="md-ellipsis">
+      Writing expressions as blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-dollar-signs-in-line-with-and-within-mathematical-expressions">
+<span class="md-ellipsis">
+      Writing dollar signs in line with and within mathematical expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-latex-torturial">
+<span class="md-ellipsis">
+      Basic LaTeX torturial
+    </span>
+</a>
+<nav aria-label="Basic LaTeX torturial" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fractions">
+<span class="md-ellipsis">
+      Fractions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roots">
+<span class="md-ellipsis">
+      Roots
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sums-and-integrals">
+<span class="md-ellipsis">
+      Sums and integrals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-big-commands-which-operate-in-a-similar-manner-with-sums-and-integrals">
+<span class="md-ellipsis">
+      Other "big" commands which operate in a similar manner with sums and integrals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brackets-braces-and-delimiters">
+<span class="md-ellipsis">
+      Brackets, braces and delimiters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-sizing">
+<span class="md-ellipsis">
+      Automatic sizing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-sizing">
+<span class="md-ellipsis">
+      Manual sizing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrices-and-arrays">
+<span class="md-ellipsis">
+      Matrices and arrays
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-text-to-equations">
+<span class="md-ellipsis">
+      Adding text to equations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#some-accents">
+<span class="md-ellipsis">
+      Some accents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#color">
+<span class="md-ellipsis">
+      Color
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plus-and-minus-signs">
+<span class="md-ellipsis">
+      Plus and minus signs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controlling-horizontal-spacing">
+<span class="md-ellipsis">
+      Controlling horizontal spacing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manually-specifying-formula-style">
+<span class="md-ellipsis">
+      Manually Specifying Formula Style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dots-in-formulas">
+<span class="md-ellipsis">
+      Dots in formulas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-mathematical-symbols">
+<span class="md-ellipsis">
+      List of mathematical symbols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Useful tips
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Useful tips
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../useful-tips/VIVADO/">
+<span class="md-ellipsis">
+    This is a useful tip on using VIVADO 2024.1
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../useful-tips/Compressed-file-name-is-garbled/">
+<span class="md-ellipsis">
+    This is a useful tip on garbled compressed file names
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Page 1(testing)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Page 1(testing)
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../section/1/">
+<span class="md-ellipsis">
+    Hello world
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2/">
+<span class="md-ellipsis">
+    2
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Page 2(testing)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Page 2(testing)
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../section/2/">
+<span class="md-ellipsis">
+    2
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headings">
+<span class="md-ellipsis">
+      Headings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#styling-text">
+<span class="md-ellipsis">
+      Styling text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quoting-text">
+<span class="md-ellipsis">
+      Quoting text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quoting-code">
+<span class="md-ellipsis">
+      Quoting code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-color-models">
+<span class="md-ellipsis">
+      Supported color models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#links">
+<span class="md-ellipsis">
+      Links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-links">
+<span class="md-ellipsis">
+      Section links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relative-links">
+<span class="md-ellipsis">
+      Relative links
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#images">
+<span class="md-ellipsis">
+      Images
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specifying-the-theme-an-image-is-shown-to">
+<span class="md-ellipsis">
+      Specifying the theme an image is shown to
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+<span class="md-ellipsis">
+      Lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-lists">
+<span class="md-ellipsis">
+      Nested Lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-lists">
+<span class="md-ellipsis">
+      Task lists
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-issues-and-pull-requests">
+<span class="md-ellipsis">
+      Referencing issues and pull requests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-issues-and-pull-requests_1">
+<span class="md-ellipsis">
+      Referencing issues and pull requests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#referencing-external-resources">
+<span class="md-ellipsis">
+      Referencing external resources
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uploading-assets">
+<span class="md-ellipsis">
+      Uploading assets
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-emojis">
+<span class="md-ellipsis">
+      Using emojis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#paragraphs">
+<span class="md-ellipsis">
+      Paragraphs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#footnotes">
+<span class="md-ellipsis">
+      Footnotes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alerts">
+<span class="md-ellipsis">
+      Alerts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hiding-content-with-comments">
+<span class="md-ellipsis">
+      Hiding content with comments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ignoring-markdown-formatting">
+<span class="md-ellipsis">
+      Ignoring Markdown formatting
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disabling-markdown-rendering">
+<span class="md-ellipsis">
+      Disabling Markdown rendering
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-table">
+<span class="md-ellipsis">
+      Creating a table
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-collapsed-section">
+<span class="md-ellipsis">
+      Creating a collapsed section
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-mermaid-diagrams">
+<span class="md-ellipsis">
+      Create Mermaid diagrams
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#several-mkdocs-features">
+<span class="md-ellipsis">
+      Several MkDocs features
+    </span>
+</a>
+<nav aria-label="Several MkDocs features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonition">
+<span class="md-ellipsis">
+      Admonition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxdetails">
+<span class="md-ellipsis">
+      Pymdownx.details
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxsmartsymbols">
+<span class="md-ellipsis">
+      Pymdownx.smartsymbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pymdownxtabbed">
+<span class="md-ellipsis">
+      Pymdownx.tabbed
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-mathematical-expressions">
+<span class="md-ellipsis">
+      Writing mathematical expressions
+    </span>
+</a>
+<nav aria-label="Writing mathematical expressions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-inline-expressions">
+<span class="md-ellipsis">
+      Writing inline expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-expressions-as-blocks">
+<span class="md-ellipsis">
+      Writing expressions as blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-dollar-signs-in-line-with-and-within-mathematical-expressions">
+<span class="md-ellipsis">
+      Writing dollar signs in line with and within mathematical expressions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-latex-torturial">
+<span class="md-ellipsis">
+      Basic LaTeX torturial
+    </span>
+</a>
+<nav aria-label="Basic LaTeX torturial" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fractions">
+<span class="md-ellipsis">
+      Fractions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#roots">
+<span class="md-ellipsis">
+      Roots
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sums-and-integrals">
+<span class="md-ellipsis">
+      Sums and integrals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-big-commands-which-operate-in-a-similar-manner-with-sums-and-integrals">
+<span class="md-ellipsis">
+      Other "big" commands which operate in a similar manner with sums and integrals
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brackets-braces-and-delimiters">
+<span class="md-ellipsis">
+      Brackets, braces and delimiters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automatic-sizing">
+<span class="md-ellipsis">
+      Automatic sizing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manual-sizing">
+<span class="md-ellipsis">
+      Manual sizing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrices-and-arrays">
+<span class="md-ellipsis">
+      Matrices and arrays
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-text-to-equations">
+<span class="md-ellipsis">
+      Adding text to equations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#some-accents">
+<span class="md-ellipsis">
+      Some accents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#color">
+<span class="md-ellipsis">
+      Color
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plus-and-minus-signs">
+<span class="md-ellipsis">
+      Plus and minus signs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#controlling-horizontal-spacing">
+<span class="md-ellipsis">
+      Controlling horizontal spacing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#manually-specifying-formula-style">
+<span class="md-ellipsis">
+      Manually Specifying Formula Style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dots-in-formulas">
+<span class="md-ellipsis">
+      Dots in formulas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#list-of-mathematical-symbols">
+<span class="md-ellipsis">
+      List of mathematical symbols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="basic-writing-and-formatting-syntax-for-markdown-and-latex">Basic writing and formatting syntax for Markdown and LaTeX<a class="headerlink" href="#basic-writing-and-formatting-syntax-for-markdown-and-latex" title="Permanent link">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Before reading...</p>
+<p>This article is created from <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub Docs</a>, <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX Wikibooks(basic)</a> and <a href="https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics">LaTeX Wikibooks(advanced)</a>. </p>
+<p>You can visit these websites and learn. The author has made some edits to make them easier to understand and learn. There may be some errors in this documentation and many contents on the three websites have been removed for simplicity. If you would like to see the original full documentation, please visit the links which I have provided above.</p>
+</div>
+<p>Create sophisticated formatting for your prose and code on GitHub with simple syntax.</p>
+<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">¶</a></h2>
+<p>To create a heading, add one to six <code>#</code> symbols before your heading text. The number of <code>#</code> you use will determine the hierarchy level and typeface size of the heading.</p>
+<p><div class="highlight"><pre><span></span><code># A first-level heading
+## A second-level heading
+### A third-level heading
+#### A fourth-level heading
+##### A fifth-level heading
+###### A sixth-level heading
+</code></pre></div>
+<img alt="img" src="../../img/1.png"/></p>
+<!--This is the same as ![img](/docs/img/1.png)-->
+<h2 id="styling-text">Styling text<a class="headerlink" href="#styling-text" title="Permanent link">¶</a></h2>
+<p>You can indicate emphasis with bold, italic, strikethrough, subscript, or superscript text in comment fields and <code>.md</code> files.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Style</th>
+<th style="text-align: center;">Syntax</th>
+<th style="text-align: center;">Keyboard shortcut</th>
+<th style="text-align: center;">Example</th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Bold</td>
+<td style="text-align: center;"><code>** **</code> or <code>__ __</code></td>
+<td style="text-align: center;"><code>Command</code>+<code>B</code> (Mac) or <code>Ctrl</code>+<code>B</code> (Windows/Linux)</td>
+<td style="text-align: center;"><code>**This is bold text**</code></td>
+<td style="text-align: center;"><strong>This is bold text</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Italic</td>
+<td style="text-align: center;"><code>* *</code> or <code>_ _</code></td>
+<td style="text-align: center;"><code>Command</code>+<code>I</code> (Mac) or <code>Ctrl</code>+<code>I</code> (Windows/Linux)</td>
+<td style="text-align: center;"><code>_This text is italicized_</code></td>
+<td style="text-align: center;"><em>This text is italicized</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">Strikethrough</td>
+<td style="text-align: center;"><code>~~ ~~</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><code>~~This was mistaken text~~</code></td>
+<td style="text-align: center;">~~This was mistaken text~~*</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bold and nested italic</td>
+<td style="text-align: center;"><code>** **</code> and <code>_ _</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><code>**This text is _extremely_ important**</code></td>
+<td style="text-align: center;"><strong>This text is <em>extremely</em> important</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">All bold and italic</td>
+<td style="text-align: center;"><code>*** ***</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><code>***All this text is important***</code></td>
+<td style="text-align: center;"><em><strong>All this text is important</strong></em></td>
+</tr>
+<tr>
+<td style="text-align: center;">Subscript</td>
+<td style="text-align: center;"><code>&lt;sub&gt; &lt;/sub&gt;</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><code>This is a &lt;sub&gt;subscipt&lt;/sub&gt; text</code></td>
+<td style="text-align: center;">This is a<sub>subscript</sub> text</td>
+</tr>
+<tr>
+<td style="text-align: center;">Superscript</td>
+<td style="text-align: center;"><code>&lt;sup&gt; &lt;/sup&gt;</code></td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;"><code>This is a &lt;sup&gt;superscript&lt;/sup&gt; text</code></td>
+<td style="text-align: center;">This is a<sup>superscript</sup> text</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>*: I don't know why mkdocs doesn't support using <code>~~ ~~</code> to apply the strikethrough effect. Maybe this is not compatible with my material theme.</p>
+</blockquote>
+<p>We can use the HTML <code>&lt;del&gt;</code> tag to apply the strikethrough effect.</p>
+<p>huhuhuhu</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Style</th>
+<th style="text-align: right;">Syntax</th>
+<th style="text-align: right;">Keyboard shortcut</th>
+<th style="text-align: right;">Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Strikethrough</td>
+<td style="text-align: right;"><code>&lt;del&gt; &lt;/del&gt;</code></td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;"><code>&lt;del&gt;This was mistaken text&lt;/del&gt;</code></td>
+<td><del>This was mistaken text</del></td>
+</tr>
+</tbody>
+</table>
+<h2 id="quoting-text">Quoting text<a class="headerlink" href="#quoting-text" title="Permanent link">¶</a></h2>
+<p>You can quote text with a <code>&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code>Text that is not a quote
+
+&gt; Text that is a quote
+</code></pre></div>
+<p>Quoted text is indented, with a different type of color.</p>
+<p>Text that is not a quote.</p>
+<blockquote>
+<p>Text that is a quote</p>
+<p>This is a multi-line quote</p>
+<p>Second line</p>
+<p>Text that is a quote</p>
+<p>This is a multi-line quote</p>
+<p>Second line</p>
+<p><strong>The text with the quote will be formatted</strong></p>
+</blockquote>
+<p>You can add another quote in a quote just like this:</p>
+<blockquote>
+<p>This is the quote</p>
+<blockquote>
+<p>This is a quote in the quote</p>
+</blockquote>
+<p>This is the quote</p>
+<blockquote>
+<blockquote>
+<p>This is quote in the quote of the quote</p>
+</blockquote>
+<p>This is a quote in the quote</p>
+</blockquote>
+<p>This is the quote</p>
+<blockquote>
+<p>This is a quote in the quote</p>
+<blockquote>
+<p>This is quote in the quote of the quote</p>
+</blockquote>
+</blockquote>
+<p>This is the quote</p>
+<blockquote>
+<p>This is a quote in the quote</p>
+</blockquote>
+<p>This is the quote</p>
+<blockquote>
+<blockquote>
+<p>This is quote in the quote of the quote</p>
+</blockquote>
+</blockquote>
+<p>This is the quote</p>
+</blockquote>
+<p>You can add a horizontal line before a quote to make the quote more beautiful.</p>
+<div class="highlight"><pre><span></span><code>---
+&gt; This is the quote
+</code></pre></div>
+<hr/>
+<blockquote>
+<p>This is the quote</p>
+</blockquote>
+<h2 id="quoting-code">Quoting code<a class="headerlink" href="#quoting-code" title="Permanent link">¶</a></h2>
+<p>You can call out code or a command within a sentence with single backticks. <strong>The text within the backticks will not be formatted.</strong> You can also press the <code>Command</code>+<code>E</code> (Mac) or <code>Ctrl</code>+<code>E</code> (Windows/Linux) keyboard shortcut to insert the backticks for a code block within a line of Markdown.</p>
+<div class="highlight"><pre><span></span><code>Use `git status` to list all new or modified files that haven't yet been committed.
+</code></pre></div>
+<p>Use <code>git status</code> to list all new or modified files that haven't yet been committed.</p>
+<p>To format code or text into its own distinct block, use triple backticks.</p>
+<blockquote>
+<p>Some basic Git commands are:</p>
+<p>```</p>
+<p>git status</p>
+<p>git add</p>
+<p>git commit</p>
+<p>```</p>
+</blockquote>
+<p><strong>Some basic Git commands are:</strong></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+git<span class="w"> </span>add
+git<span class="w"> </span>commit
+</code></pre></div>
+<p>To display triple backticks  ``` in a fenced code block, wrap them inside quadruple ```` backticks.</p>
+<div class="highlight"><pre><span></span><code>```
+Look! You can see my backticks.
+```
+</code></pre></div>
+<h2 id="supported-color-models">Supported color models<a class="headerlink" href="#supported-color-models" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This feature is only available on GitHub, it will not work on MkDocs</p>
+</blockquote>
+<p>In issues, pull requests and discussions, you can call out colors within a sentence by using backticks. A supported color model within backticks will display a visualization of the color.</p>
+<div class="highlight"><pre><span></span><code>The background color is `#ffffff` for light mode and `#000000` for dark mode.
+</code></pre></div>
+<p>The background color is <code>#ffffff</code> for light mode and <code>#000000</code> for dark mode.</p>
+<p>Here are the currently supported color models.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Color</th>
+<th style="text-align: right;">Syntax</th>
+<th style="text-align: right;">Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">HEX</td>
+<td style="text-align: right;">`#RRGGBB`</td>
+<td style="text-align: right;">`#0969DA`</td>
+<td><code>#0969DA</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">RGB</td>
+<td style="text-align: right;">`rgb(R,G,B)`</td>
+<td style="text-align: right;">`rgb(9, 105, 218)`</td>
+<td><code>rgb(9, 105, 218)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">HSL</td>
+<td style="text-align: right;">`hsl(H,S,L)`</td>
+<td style="text-align: right;">`hsl(212, 92%, 45%)`</td>
+<td><code>hsl(212, 92%, 45%)</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note:</p>
+<ul>
+<li>
+<p>A supported color model cannot have any leading or trailing spaces within the backticks.</p>
+</li>
+<li>
+<p>The visualization of the color supported in issues, pull requests, and discussions on GitHub.</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">¶</a></h2>
+<p>You can create an inline link by wrapping the link in brackets <code>[ ]</code>, and wrapping the URL in parentheses <code>( )</code>. You can also use the keyboard shortcut <code>Command</code>+<code>K</code> to create a link. When you have text selected, you can paste a URL from your clipboard to automatically create a link from the selection.</p>
+<p>You can also create a Markdown hyperlink by highlighting the text and using the keyboard shortcut <code>Command</code>+<code>V</code>. If you'd like to replace the text with the link, use the shortcut <code>Command</code>+<code>Shift</code>+<code>V</code>.</p>
+<p><code>This site was built using [GitHub Pages](https://pages.github.com/).</code></p>
+<p>This site was built using <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<h2 id="section-links">Section links<a class="headerlink" href="#section-links" title="Permanent link">¶</a></h2>
+<p>You can link directly to a section in a rendered file by hovering over the section heading to expose <img alt="🔗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f517.svg" title=":link:"/>.</p>
+<h2 id="relative-links">Relative links<a class="headerlink" href="#relative-links" title="Permanent link">¶</a></h2>
+<p>You can define relative links and image paths in your rendered files to help readers navigate to other files in your repository.</p>
+<p>A relative link is a link that is relative to the current file. For example, if you have a README file in root of your repository, and you have another file in <em>docs/CONTRIBUTING.md</em>, the relative link to <em>CONTRIBUTING.md</em> in your README might look like this:</p>
+<p><code>[Contribution guidelines for this project](docs/CONTRIBUTING.md)</code></p>
+<p>GitHub will automatically transform your relative link or image path based on whatever branch you're currently on, so that the link or path always works. The path of the link will be relative to the current file. <strong>Links starting with <code>/</code> will be relative to the repository root. You can use all relative link operands, such as <code>./</code> and <code>../</code>.</strong></p>
+<blockquote>
+<p><code>/</code> represents the root of the repository</p>
+<p><code>./</code> represents the current path</p>
+<p><code>../</code> represents the parent path of the current path</p>
+<p>When there are no link operands ahead, it is the same as the link starting with <code>./</code></p>
+<p>Links starting with <code>/</code> are <strong>absolute links</strong>.</p>
+<p>Links starting with <code>./</code> <code>../</code> or nothing are <strong>relative links</strong>.</p>
+<ul>
+<li>Example: <code>docs/CONTRIBUTING.md</code> is equivalent to <code>./docs/CONTRIBUTING.md</code></li>
+</ul>
+<p>When you are currently at the root of the repository, these three links are equivalent:</p>
+<ul>
+<li><code>docs/CONTRIBUTING.md</code>(Current is the root)</li>
+<li><code>./docs/CONTRIBUTING.md</code>(Same as the last one)</li>
+<li><code>/docs/CONTRIBUTING.md</code>(Root is current)</li>
+</ul>
+<p>In other cases, <code>docs/CONTRIBUTING.md</code> and <code>/docs/CONTRIBUTING.md</code> point to different paths, they are not equal</p>
+</blockquote>
+<p>Your link text should be on a single line. The example below will not work.</p>
+<div class="highlight"><pre><span></span><code>[Contribution 
+guidelines for this project](docs/CONTRIBUTING.md)
+</code></pre></div>
+<p>Relative links are easier for users who clone your repository. Absolute links may not work in clones of your repository - we recommend using relative links to refer to other files within your repository.</p>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">¶</a></h2>
+<p>You can display an image by adding <code>!</code> and wrapping the alt text in <code>[ ]</code>. Alt text is a short text equivalent of the information in the image. Then, wrap the link for the image in parentheses <code>( )</code>.</p>
+<p><code>![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)</code></p>
+<p><img alt="Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle." src="https://myoctocat.com/assets/images/base-octocat.svg"/></p>
+<blockquote>
+<p>Note: When you want to display an image that is in your repository, use relative links instead of absolute links.</p>
+</blockquote>
+<p>Here are some examples for using relative links to display an image.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Context</th>
+<th>Relative Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">In a <code>.md</code> file on the same branch</td>
+<td><code>/assets/images/electrocat.png</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">In a <code>.md</code> file on another branch</td>
+<td><code>/../main/assets/images/electrocat.png</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">In issues, pull requests and comments of the repository</td>
+<td><code>../blob/main/assets/images/electrocat.png?raw=true</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">In a <code>.md</code> file in another repository</td>
+<td><code>/../../../../github/docs/blob/main/assets/images/electrocat.png</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">In issues, pull requests and comments of another repository</td>
+<td><code>../../../github/docs/blob/main/assets/images/electrocat.png?raw=true</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: The last two relative links in the table above will work for images in a private repository only if the viewer has at least read access to the private repository that contains these images.</p>
+</blockquote>
+<h2 id="specifying-the-theme-an-image-is-shown-to">Specifying the theme an image is shown to<a class="headerlink" href="#specifying-the-theme-an-image-is-shown-to" title="Permanent link">¶</a></h2>
+<p><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png"/>
+<source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"/>
+<img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png"/>
+</picture></p>
+<p>If your system theme is dark, then you will see a moon with stars above; otherwise, you will see a sun.</p>
+<p>What you see only depends on your system settings. Changing the theme of the page by clicking the button at the head of the page will not affect the image above.</p>
+<p>The sun and the moon are diaplayed down below:</p>
+<p><img alt="sun" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png" width="45%"/>
+<img alt="moon" src="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png" width="45%"/></p>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">¶</a></h2>
+<p>You can make an unordered list by preceding one or more lines of text with <code>-</code>, <code>*</code>, or <code>+</code>.</p>
+<div class="highlight"><pre><span></span><code>- George Washington
+* John Adams
++ Thomas Jefferson
+</code></pre></div>
+<ul>
+<li>George Washington</li>
+<li>John Adams</li>
+<li>Thomas Jefferson</li>
+</ul>
+<p>To order your list, precede each line with a number.</p>
+<div class="highlight"><pre><span></span><code>1. James Madison
+2. James Monroe
+3. John Quincy Adams
+</code></pre></div>
+<ol>
+<li>James Madison</li>
+<li>James Monroe</li>
+<li>John Quincy Adams</li>
+</ol>
+<h2 id="nested-lists">Nested Lists<a class="headerlink" href="#nested-lists" title="Permanent link">¶</a></h2>
+<p>You can create a nested list by indenting one or more list items below another item.</p>
+<p>To create a nested list using the web editor on GitHub or a text editor that uses a monospaced font, like Visual Studio Code, you can align your list visually. Type space characters in front of your nested list item until the list marker character (<code>-</code> or <code>*</code>) lies directly below the first character of the text in the item above it.</p>
+<div class="highlight"><pre><span></span><code>1. First list item
+   - First nested list item
+     - Second nested list item
+</code></pre></div>
+<blockquote>
+<p>Note: In the web-based editor, you can indent or dedent one or more lines of text by first highlighting the desired lines and then using Tab or Shift+Tab respectively.</p>
+</blockquote>
+<p><img alt="img" src="https://docs.github.com/assets/cb-7202/mw-1440/images/help/writing/nested-list-alignment.webp"/></p>
+<ol>
+<li>First list item</li>
+<li>First nested list item<ul>
+<li>Second nested list item</li>
+</ul>
+</li>
+</ol>
+<p>For more examples, see the <a href="https://github.github.com/gfm/#example-265">GitHub Flavored Markdown Spec</a>.</p>
+<h2 id="task-lists">Task lists<a class="headerlink" href="#task-lists" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>Add these lines to the <code>mkdocs.yml</code> file to add the task lists support:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+  - pymdownx.tasklist
+</code></pre></div></p>
+</blockquote>
+<p>To create a task list, preface list items with a <strong>hyphen (-)</strong> and space followed by <code>[ ]</code>. To mark a task as complete, use <code>[x]</code> or <code>[X]</code>.</p>
+<div class="highlight"><pre><span></span><code>- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+</code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><input checked="" disabled="" type="checkbox"> #739</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"> https://github.com/octo-org/octo-repo/issues/740</input></li>
+<li class="task-list-item"><input disabled="" type="checkbox"> Add delight to the experience when all tasks are complete <img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f389.svg" title=":tada:"/></input></li>
+</ul>
+<p>If a task list item description begins with a parenthesis, you'll need to escape it with :</p>
+<p><code>- [ ] \(Optional) Open a followup issue</code></p>
+<ul class="task-list">
+<li class="task-list-item"><input disabled="" type="checkbox"> (Optional) Open a followup issue</input></li>
+</ul>
+<h2 id="referencing-issues-and-pull-requests">Referencing issues and pull requests<a class="headerlink" href="#referencing-issues-and-pull-requests" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This feature is only available on GitHub, it will not work on MkDocs</p>
+</blockquote>
+<p>@cmw15004431816</p>
+<h2 id="referencing-issues-and-pull-requests_1">Referencing issues and pull requests<a class="headerlink" href="#referencing-issues-and-pull-requests_1" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This feature is only available on GitHub, it will not work on MkDocs</p>
+</blockquote>
+<p>You can bring up a list of suggested issues and pull requests within the repository by typing <code>#</code>. Type the issue or pull request number or title to filter the list, and then press either tab or enter to complete the highlighted result.</p>
+<h2 id="referencing-external-resources">Referencing external resources<a class="headerlink" href="#referencing-external-resources" title="Permanent link">¶</a></h2>
+<p>If custom autolink references are configured for a repository, then references to external resources, like a JIRA issue or Zendesk ticket, convert into shortened links. To know which autolinks are available in your repository, contact someone with admin permissions to the repository.</p>
+<h2 id="uploading-assets">Uploading assets<a class="headerlink" href="#uploading-assets" title="Permanent link">¶</a></h2>
+<p>You can upload assets like images by dragging and dropping, selecting from a file browser, or pasting. You can upload assets to issues, pull requests, comments, and <code>.md</code> files in your repository.</p>
+<h2 id="using-emojis">Using emojis<a class="headerlink" href="#using-emojis" title="Permanent link">¶</a></h2>
+<p>You can add emoji to your writing by typing <code>:EMOJICODE:</code>, a colon followed by the name of the emoji.</p>
+<p><code>@octocat :+1: This PR looks great - it's ready to merge! :shipit:</code></p>
+<p>@octocat <img alt="👍" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44d.svg" title=":+1:"> This PR looks great - it's ready to merge! :shipit:</img></p>
+<blockquote>
+<p>GitHub and MkDocs support different emojis</p>
+<p>For GitHub emojis, please refer to <a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">this link</a>.</p>
+<p>For MkDocs emojis, please refer to <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search">this link</a>.</p>
+</blockquote>
+<h2 id="paragraphs">Paragraphs<a class="headerlink" href="#paragraphs" title="Permanent link">¶</a></h2>
+<p>You can create a new paragraph by leaving a blank line between lines of text.</p>
+<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This feature is only available on GitHub, it will not work on MkDocs</p>
+</blockquote>
+<p>You can add footnotes to your content by using this bracket syntax:</p>
+<p><div class="highlight"><pre><span></span><code>Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+</code></pre></div>
+The footnote will render like this:</p>
+<p><img alt="img" src="https://docs.github.com/assets/cb-27017/mw-1440/images/help/writing/footnote-rendered.webp"/></p>
+<p>Here is a simple footnote<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>A footnote can also have multiple lines<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<blockquote>
+<p>Note: The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown.</p>
+<p>Footnotes are not supported in wikis.</p>
+<p>Add these lines to your <code>mkdocs.yml</code> to add the footnote support.</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+  - footnotes
+</code></pre></div>
+</blockquote>
+<h2 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This feature is only available on GitHub, it will not work on MkDocs</p>
+</blockquote>
+<p>Alerts are a Markdown extension based on the blockquote syntax that you can use to emphasize critical information. On GitHub, they are displayed with distinctive colors and icons to indicate the significance of the content.</p>
+<p>Use alerts only when they are crucial for user success and limit them to one or two per article to prevent overloading the reader. Additionally, you should avoid placing alerts consecutively. <strong>Alerts cannot be nested within other elements.</strong></p>
+<p>To add an alert, use a special blockquote line specifying the alert type, followed by the alert information in a standard blockquote. Five types of alerts are available:</p>
+<div class="highlight"><pre><span></span><code>&gt; [!NOTE]
+&gt; Useful information that users should know, even when skimming content.
+
+&gt; [!TIP]
+&gt; Helpful advice for doing things better or more easily.
+
+&gt; [!IMPORTANT]
+&gt; Key information users need to know to achieve their goal.
+
+&gt; [!WARNING]
+&gt; Urgent info that needs immediate user attention to avoid problems.
+
+&gt; [!CAUTION]
+&gt; Advises about risks or negative outcomes of certain actions.
+</code></pre></div>
+<p>Here are the rendered alerts:</p>
+<p><img alt="img" src="https://docs.github.com/assets/cb-24696/mw-1440/images/help/writing/alerts-rendered.webp"/></p>
+<h2 id="hiding-content-with-comments">Hiding content with comments<a class="headerlink" href="#hiding-content-with-comments" title="Permanent link">¶</a></h2>
+<p>You can tell GitHub to hide content from the rendered Markdown by placing the content in an HTML comment</p>
+<p><code>&lt;!-- This content will not appear in the rendered Markdown ---&gt;</code></p>
+<!-- This content will not appear in the rendered Markdown --->
+<h2 id="ignoring-markdown-formatting">Ignoring Markdown formatting<a class="headerlink" href="#ignoring-markdown-formatting" title="Permanent link">¶</a></h2>
+<p>You can tell GitHub to ignore (or escape) Markdown formatting by using <code>\</code> before the Markdown character.</p>
+<p><code>Let's rename \*our-new-project\* to \*our-old-project\*.</code></p>
+<p>Let's rename *our-new-project* to *our-old-project*.</p>
+<p>For more information on backslashes, see Daring Fireball's "<a href="https://daringfireball.net/projects/markdown/syntax#backslash">Markdown Syntax</a>"</p>
+<blockquote>
+<p>Note: The Markdown formatting will not be ignored in the title of an issue or a pull request.</p>
+</blockquote>
+<h2 id="disabling-markdown-rendering">Disabling Markdown rendering<a class="headerlink" href="#disabling-markdown-rendering" title="Permanent link">¶</a></h2>
+<p>When viewing a Markdown file, you can click <strong>Code</strong> at the top of the file to disable Markdown rendering and view the file's source instead.</p>
+<p><img alt="img" src="https://docs.github.com/assets/cb-11496/mw-1440/images/help/writing/display-markdown-as-source-global-nav-update.webp"/></p>
+<p>Disabling Markdown rendering enables you to use source view features, such as line linking, which is not possible when viewing rendered Markdown files.</p>
+<h2 id="creating-a-table">Creating a table<a class="headerlink" href="#creating-a-table" title="Permanent link">¶</a></h2>
+<p>You can create a table like this:</p>
+<div class="highlight"><pre><span></span><code>| Rank | THING-TO-RANK |
+| ---: | ------------- |
+|    1 |               |
+|    2 |               |
+|    3 |               |
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>THING-TO-RANK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>I like this</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>I like Markdown</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>If you use <code>---:</code>, it will make the whole column right ailgned</p>
+<p>If you use <code>:---:</code>, it will make the whole column center aligned</p>
+<p>If you use <code>:---</code>, it will make the whole column left aligned</p>
+<p>If you use <code>---</code>, the whole column will be left aligned by default</p>
+<p>There must be at least three hyphens <code>---</code> in each column of the header row.</p>
+<p>Cells can vary in width and do not need to be perfectly aligned within columns.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>| Left-aligned | Center-aligned | Right-aligned | Default |
+| :----------- | :------------: | ------------: | ------- |
+| 1            |       2        |             3 | 4       |
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Left-aligned</th>
+<th style="text-align: center;">Center-aligned</th>
+<th style="text-align: right;">Right-aligned</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>To include a <code>|</code> in the table, use <code>\|</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>Backtick</code></td>
+<td>`</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Pipe</strong></td>
+<td>|</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>You can use formatting such as links, inline code blocks, and text styling within your table:</p>
+</blockquote>
+<details open="">
+<summary>Tips:</summary>
+You must include a blank line before your table in order for it to correctly render.
+</details>
+<h2 id="creating-a-collapsed-section">Creating a collapsed section<a class="headerlink" href="#creating-a-collapsed-section" title="Permanent link">¶</a></h2>
+<p>To keep your content tidy, you can use the <code>&lt;details&gt;</code> tag to create an expandible collapsed section.</p>
+<ol>
+<li>To create a collapsed section for the table you created, wrap your table in <code>&lt;details&gt;</code> tags like in the following example.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>  &lt;details&gt;
+  &lt;summary&gt;My top THINGS-TO-RANK&lt;/summary&gt;
+  YOUR TABLE
+  &lt;/details&gt;
+</code></pre></div>
+<ol>
+<li>
+<p>Between the <code>&lt;summary&gt;</code> tags, replace THINGS-TO-RANK with whatever you ranked in your table.</p>
+</li>
+<li>
+<p>Optionally, to make the section display as open by default, add the open attribute to the <code>&lt;details&gt;</code> tag.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>&lt;details open&gt;
+</code></pre></div>
+<details>
+<summary>This is a collapsed section.<br/>I like apple</summary>
+
+Here is what is collapsed.
+<br/>
+Good luck!
+
+</details>
+<blockquote>
+<p><code>&lt;br&gt;</code> is used to break the line in HTML.</p>
+<p>When using the material theme for MkDocs, if you want to change to a new line in the details section including the summary section, you must use <code>&lt;br&gt;</code>. If you just add two lines, the line in the middle will be ignored so it will not work.</p>
+<p>This will not work for material theme for MkDocs, and the details or summary will remain in only one line. But it <strong>does</strong> work for Markdown, which means that if you use a Markdown previewer, the details or summary will be displayed in two separate lines.</p>
+<hr/>
+<p><code>&lt;summary&gt;</code>This is a collapsed section.</p>
+<p>I like apple<code>&lt;/summary&gt;</code></p>
+</blockquote>
+<details open="">
+<summary>This is a open-by-default collapsed section</summary>
+<br/>Here is what is collapsed.<br/>Good luck!
+
+</details>
+<p>We recommend that the summary of a collapsed section be in one line.</p>
+<details>
+<summary>My top languages(collapesd by default)</summary>
+
+| Rank | Languages |
+| ---: | --------- |
+|    1 | C         |
+|    2 | C++       |
+|    3 | Java      |
+
+</details>
+<details open="">
+<summary>My top languages(open by default)</summary>
+
+| Rank | Languages |
+| ---: | --------- |
+|    1 | C         |
+|    2 | C++       |
+|    3 | Java      |
+
+![img](../img/1.png)
+
+&gt; This is the quote
+
+`Hello` is the code.
+
+</details>
+<details>
+<summary>Hello world!</summary>
+<div class="highlight"><pre><span></span><code><span class="nb">puts</span><span class="w"> </span><span class="s2">"Hello, world!"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, world"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>I have to point out with regret that the material theme for MkDocs only supports code blocks to be collapsed currently. All other features such as bold, italic, images, hyperlinks, tables and quotes are not supported.</p>
+<p>But in Markdown, these features are supported.</p>
+<p><img alt="img" src="../../img/3.png"/></p>
+<div class="highlight"><pre><span></span><code>Collapesd
+</code></pre></div>
+<p><img alt="img" src="../../img/2.png"/></p>
+<div class="highlight"><pre><span></span><code>Open
+</code></pre></div>
+<p>In Markdown, if you use this:</p>
+<p><code>&lt;summary&gt;Hello, world!&lt;/summary&gt;</code></p>
+<p>without the <code>&lt;details&gt;</code> tag, you will only see the plain text <code>Hello, world!</code>.</p>
+<p>But in the material theme for MkDocs, it will display just the same as the collapsed collapse section, but the section cannot be opened.</p>
+<summary>Hello, world!</summary>
+<h2 id="create-mermaid-diagrams">Create Mermaid diagrams<a class="headerlink" href="#create-mermaid-diagrams" title="Permanent link">¶</a></h2>
+<p>Here is a simple flow chart:</p>
+<div class="highlight"><pre><span></span><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre></div>
+<p>Unfortunately, I failed when configuring MkDocs to support Mermaid. Currently MkDocs does not support rendering Mermaid diagrams.</p>
+<p><div class="highlight"><pre><span></span><code>  info
+</code></pre></div>
+<img alt="img" src="../../img/4.png"/></p>
+<p>The apperance in VScode.</p>
+<p>When using VScode to preview the Mermaid diagrams, you need to install the <a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">Markdown Preview Mermaid Support</a> extension.</p>
+<p>For more types of diagrams, please visit <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams">this link</a>.</p>
+<h2 id="several-mkdocs-features">Several MkDocs features<a class="headerlink" href="#several-mkdocs-features" title="Permanent link">¶</a></h2>
+<p>These features are only available with MkDocs. They are not available with Markdown.</p>
+<h3 id="admonition">Admonition<a class="headerlink" href="#admonition" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>You need to configure -admonition in <code>mkdocs.yml</code></p>
+</blockquote>
+<p>You can use this to create a note:</p>
+<div class="highlight"><pre><span></span><code>!!! note
+    This is a note.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.</p>
+</div>
+<div class="admonition hello">
+<p class="admonition-title">Hello</p>
+<p>Hello World!</p>
+<p>I like to program.</p>
+</div>
+<p>The <code>title</code> must be in one line, the <code>content</code> can be in more than one lines.</p>
+<p>It can't be collapsed.</p>
+<h3 id="pymdownxdetails">Pymdownx.details<a class="headerlink" href="#pymdownxdetails" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>You need to configure -pymdownx.details in <code>mkdocs.yml</code></p>
+</blockquote>
+<p>You can create a collapsible section like this:</p>
+<div class="highlight"><pre><span></span><code>??? note "Click to expand"
+    This is a collapsible section.
+</code></pre></div>
+<p>You can also use HTML, for sure:</p>
+<div class="highlight"><pre><span></span><code>&lt;details&gt;
+&lt;summary&gt;Click to expand&lt;/summary&gt;
+This is a collapsible section.
+&lt;/details&gt;
+</code></pre></div>
+<details>
+<summary>Click to expand, using HTML</summary>
+This is a collapsible section.
+</details>
+<details class="note">
+<summary>Click to expand, using ???</summary>
+<p>This is a collapsible section.</p>
+</details>
+<p>These two ways have similar appearances, but using <code>???</code> is easier and more beautiful.</p>
+<h3 id="pymdownxsmartsymbols">Pymdownx.smartsymbols<a class="headerlink" href="#pymdownxsmartsymbols" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>You need to configure -pymdownx.smartsymbols in <code>mkdocs.yml</code></p>
+</blockquote>
+<p>© == ©</p>
+<div class="highlight"><pre><span></span><code>(c) will become ©
+</code></pre></div>
+<h3 id="pymdownxtabbed">Pymdownx.tabbed<a class="headerlink" href="#pymdownxtabbed" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>You need to configure -pymdownx.tabbed in <code>mkdocs.yml</code></p>
+<p><strong>But I haven't activated this feature yet</strong></p>
+</blockquote>
+<p>If you configure this feature, you can create code blocks like this:</p>
+<div class="highlight"><pre><span></span><code>=== "Python"
+    ```python
+    print("Hello, World!")
+    ```
+=== "JavaScript"
+    ```javascript
+    console.log("Hello, World!");
+    ```
+</code></pre></div>
+<blockquote>
+<p>Remember to add the space between the <code>===</code> and the<code>"</code></p>
+</blockquote>
+<p>It will look like this:</p>
+<p><img alt="img" src="../../img/5.png"/></p>
+<p>But without this feature, you can also achieve almost the same appearance:</p>
+<div class="highlight"><pre><span></span><code>Python
+```python
+    print("Hello, World!")
+```
+JavaScript
+```javascript
+    console.log("Hello, World!");
+```
+</code></pre></div>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
+</code></pre></div>
+<p>JavaScript</p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="writing-mathematical-expressions">Writing mathematical expressions<a class="headerlink" href="#writing-mathematical-expressions" title="Permanent link">¶</a></h2>
+<h3 id="writing-inline-expressions">Writing inline expressions<a class="headerlink" href="#writing-inline-expressions" title="Permanent link">¶</a></h3>
+<p>There are two options for delimiting a math expression inline with your text. You can either surround the expression with dollar symbols (<code>$</code>), or start the expression with <code>$`</code> and end it with <code>`$</code>. The latter syntax is useful when the expression you are writing contains characters that overlap with markdown syntax.</p>
+<p>But it seems that only the <code>$</code> delimiter works fine in VScode.</p>
+<p>This sentence uses <code>$</code> delimiters to show math inline:<span class="arithmatex">\(\sqrt{3x-1}+(1+x)^2\)</span></p>
+<p>This sentence uses <code>$`</code> and <code>`$</code> delimiters to show math inline:<span class="arithmatex">\(<code>\sqrt{3x-1}+(1+x)^2</code>\)</span></p>
+<h3 id="writing-expressions-as-blocks">Writing expressions as blocks<a class="headerlink" href="#writing-expressions-as-blocks" title="Permanent link">¶</a></h3>
+<p>To add a math expression as a block, start a new line and delimit the expression with two dollar symbols <code>$$</code>.</p>
+<p><strong>The Cauchy-Schwarz Inequality</strong></p>
+<div class="arithmatex">\[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]</div>
+<blockquote>
+<p>Add these configuration to mkdocs.yml to activate the LaTeX support in Mkdocs</p>
+<div class="highlight"><pre><span></span><code>- pymdownx.arithmatex:
+    generic: true
+extra_javascript:
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js
+</code></pre></div>
+</blockquote>
+<p>Alternatively, you can use the <code>```math</code> code block syntax to display a math expression as a block.</p>
+<div class="highlight"><pre><span></span><code>\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+</code></pre></div>
+<blockquote>
+<p>You need to use <code>Markdown Preview Enhanced</code> to use the <code>```math</code> code block syntax in VScode.</p>
+</blockquote>
+<h3 id="writing-dollar-signs-in-line-with-and-within-mathematical-expressions">Writing dollar signs in line with and within mathematical expressions<a class="headerlink" href="#writing-dollar-signs-in-line-with-and-within-mathematical-expressions" title="Permanent link">¶</a></h3>
+<p>To display a dollar sign as a character in the same line as a mathematical expression, you need to escape the non-delimiter <code>$</code> to ensure the line renders correctly.</p>
+<ul>
+<li>Within a math expression, add a <code>\</code> symbol before the explicit <code>$</code>.</li>
+</ul>
+<p>This expression uses <code>\$</code> to display a dollar sign: <span class="arithmatex">\(\sqrt{\$4}\)</span></p>
+<ul>
+<li>Outside a math expression, but on the same line, use span tags around the explicit <code>$</code>.</li>
+</ul>
+<blockquote>
+<p>You may need to use <code>\$</code></p>
+</blockquote>
+<p><code>To split &lt;span&gt;\$&lt;/span&gt;100 in half, we calculate $100/2$</code></p>
+<p>To split <span>$</span>100 in half, we calculate <span class="arithmatex">\(100/2\)</span>.</p>
+<p>To split $100 in half, we calculate <span class="arithmatex">\(100/2\)</span>.</p>
+<p>The backtick <code>`</code> may encounter the same problem as the <code>$</code>, and the way to solve the problem is the same.</p>
+<h3 id="basic-latex-torturial">Basic LaTeX torturial<a class="headerlink" href="#basic-latex-torturial" title="Permanent link">¶</a></h3>
+<p>Please follow <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">this link</a>.</p>
+<p>If you want to use both the <code>$$</code> formula and the <code>$</code> formula, I would recommend you put the <code>$$</code> formula in a seperated line. If you use GitHub, there will not be any differences between this two ways, but if you use Mkdocs, you may encounter some unexpected errors in rendering.</p>
+<p>For example, I will recommend you write like this:</p>
+<p>Hello, this is a small fraction: <span class="arithmatex">\(\frac{3}{11}\)</span> and this is a big fraction: </p>
+<div class="arithmatex">\[\frac{3}{11}\]</div>
+<div class="highlight"><pre><span></span><code>Hello, this is a small fraction: <span class="s">$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$</span> and this is a big fraction: 
+
+<span class="sb">$$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$$</span>
+</code></pre></div>
+<p>Instead of this:</p>
+<p>Hello, this is a small fraction: <span class="arithmatex">\(\frac{3}{11}\)</span> and this is a big fraction: 
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{3}{11}\)</span>\)</span></p>
+<div class="highlight"><pre><span></span><code>Hello, this is a small fraction: <span class="s">$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$</span> and this is a big fraction: 
+<span class="sb">$$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$$</span>
+</code></pre></div>
+<p>Or this:</p>
+<p>Hello, this is a small fraction: <span class="arithmatex">\(\frac{3}{11}\)</span> and this is a big fraction: <span class="arithmatex">\(<span class="arithmatex">\(\frac{3}{11}\)</span>\)</span></p>
+<div class="highlight"><pre><span></span><code>Hello, this is a small fraction: <span class="s">$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$</span> and this is a big fraction: <span class="sb">$$</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">3</span><span class="nb">}{</span><span class="m">11</span><span class="nb">}</span><span class="s">$$</span>
+</code></pre></div>
+<p>Although they look the same in GitHub.</p>
+<h4 id="fractions">Fractions<a class="headerlink" href="#fractions" title="Permanent link">¶</a></h4>
+<p><code>\frac{numerator}{denominator}</code> will rendered like this: <span class="arithmatex">\(\frac{numerator}{denominator}\)</span> or </p>
+<div class="arithmatex">\[\frac{numerator}{denominator}\]</div>
+<p>Next are some examples.</p>
+<p><span class="arithmatex">\(\frac{3}{5}\)</span></p>
+<p>Use <code>\binom{top}{bottom}</code> to render binomials. It will render like this: <span class="arithmatex">\(\binom{top}{bottom}\)</span> or </p>
+<div class="arithmatex">\[\binom{top}{bottom}\]</div>
+<p>Now I would like to render the famous equation —— binomial theorem.</p>
+<div class="arithmatex">\[\binom{n}{k}=\frac{n!}{k!(n-k)!}\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$</code></p>
+</details>
+<p>You can also use <code>a/b</code> <span class="arithmatex">\(a/b\)</span> for convenience.</p>
+<p>If you want to make the numerator and denominator rendered up and down separately, you can use the superscript and subscript just like this: <code>^a/_b</code> <span class="arithmatex">\(^a/_b\)</span>. You can make it more tightened by using the negative space <code>\!</code> just like this: <code>^a\!/_b</code> <span class="arithmatex">\(^a\!/_b\)</span> or this: <code>^a\!/\!_b</code> <span class="arithmatex">\(^a\!/\!_b\)</span>.</p>
+<p>These ways to render fractions without using the <code>\frac</code> are often used in the inline style (the <code>$</code> formula).</p>
+<p>LaTeX offers a basic fraction <code>\frac</code> and the continous fraction <code>\cfrac</code>.</p>
+<p>The usage of the <code>\cfrac</code> is the same as the <code>\frac</code>.</p>
+<p>If you are trying to render a nested big fraction, I would recommend you to use the <code>\cfrac</code> instead of the <code>\frac</code>. Below is an example:</p>
+<div class="arithmatex">\[x=a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{a_4+\frac{1}{a_5+\dotsb}}}}}\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$x=a_0+\frac{1}{a_1+\frac{1}{a_2+\frac{1}{a_3+\frac{1}{a_4+\frac{1}{a_5+\dotsb}}}}}$$</code></p>
+</details>
+<p>You will see the expression is becoming smaller and smaller, which makes it hard to see.</p>
+<p>If you use the <code>\cfrac</code>, it will look like this:</p>
+<div class="arithmatex">\[x=a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{a_3+\cfrac{1}{a_4+\cfrac{1}{a_5+\dotsb}}}}}\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$x=a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{a_3+\cfrac{1}{a_4+\cfrac{1}{a_5+\dotsb}}}}}$$</code></p>
+</details>
+<p>The expression is not becoming smaller and smaller step by step using <code>\cfrac</code>.</p>
+<h4 id="roots">Roots<a class="headerlink" href="#roots" title="Permanent link">¶</a></h4>
+<p>Use <code>\sqrt{}</code> for square roots and <code>\sqrt[n]{}</code> for <span class="arithmatex">\(n\)</span>th root.</p>
+<p>Examples:</p>
+<div class="arithmatex">\[X(x_1, y_1) \qquad Y(x_2, y_2)\]</div>
+<div class="arithmatex">\[d(X,\;Y)=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}\]</div>
+<details class="note">
+<summary>Original code</summary>
+<div class="highlight"><pre><span></span><code><span class="sb">$$</span><span class="nb">X</span><span class="o">(</span><span class="nb">x_</span><span class="m">1</span><span class="nb">, y_</span><span class="m">1</span><span class="o">)</span><span class="nb"> </span><span class="nv">\qquad</span><span class="nb"> Y</span><span class="o">(</span><span class="nb">x_</span><span class="m">2</span><span class="nb">, y_</span><span class="m">2</span><span class="o">)</span><span class="s">$$</span>
+
+<span class="sb">$$</span><span class="nb">d</span><span class="o">(</span><span class="nb">X,</span><span class="nv">\;</span><span class="nb">Y</span><span class="o">)=</span><span class="nv">\sqrt</span><span class="nb">{</span><span class="o">(</span><span class="nb">x_</span><span class="m">1</span><span class="o">-</span><span class="nb">x_</span><span class="m">2</span><span class="o">)</span><span class="nb">^</span><span class="m">2</span><span class="o">+(</span><span class="nb">y_</span><span class="m">1</span><span class="o">-</span><span class="nb">y_</span><span class="m">2</span><span class="o">)</span><span class="nb">^</span><span class="m">2</span><span class="nb">}</span><span class="s">$$</span>
+</code></pre></div>
+</details>
+<div class="arithmatex">\[\sqrt[n]{1+x+x^2+x^3+\dotsb}\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$\sqrt[n]{1+x+x^2+x^3+\dotsb}$$</code></p>
+</details>
+<h4 id="sums-and-integrals">Sums and integrals<a class="headerlink" href="#sums-and-integrals" title="Permanent link">¶</a></h4>
+<p>The <code>\sum</code> and <code>\int</code> commands insert the sum and integral symbols respectively, with limits specified using the caret (<code>^</code>) and underscore (<code>_</code>).</p>
+<p>Examples:</p>
+<p><span class="arithmatex">\(\sum_{i=1}^{10}t_i\)</span>, <span class="arithmatex">\(\int_{1}^{10}f(x)\,\mathrm{d}x\)</span></p>
+<div class="arithmatex">\[\sum_{i=1}^{10}t_i\]</div>
+<div class="arithmatex">\[\int_{1}^{10}f(x)\,\mathrm{d}x\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>\infty</code> repersents <span class="arithmatex">\(\infty\)</span>.</p>
+</div>
+<p>You can use the <code>\limits</code> command to make the limits of an integral to be specified above and below the symbol:</p>
+<div class="arithmatex">\[\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x\equiv\int\limits_0^\infty\mathrm{e}^{-x}\,\mathrm{d}x\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x\equiv\int\limits_0^\infty\mathrm{e}^{-x}\,\mathrm{d}x$$</code></p>
+</details>
+<p>If you have multiple lines in a limit, then use <code>\substack{}</code>, within the substack, use <code>\\</code> to switch to a new line.</p>
+<p>Examples:</p>
+<div class="arithmatex">\[f'(x,\,y)=\frac{\partial^2f(x,\,y)}{\partial x\partial y}=\lim_{\substack{\left.\Delta x\,\rightarrow\,0^+\right.\\\left.\Delta y\,\rightarrow\,0^+\right.}}\frac{f(x+\Delta x,\,y+\Delta y)-f(x,\,y+\Delta y)-f(x+\Delta x,\,y)+f(x,\,y)}{\Delta x\Delta y}\]</div>
+<div class="arithmatex">\[\sum_{\substack{0&lt;i&lt;m\\0&lt;j&lt;n}}P(i,\,j)\]</div>
+<h4 id="other-big-commands-which-operate-in-a-similar-manner-with-sums-and-integrals">Other "big" commands which operate in a similar manner with sums and integrals<a class="headerlink" href="#other-big-commands-which-operate-in-a-similar-manner-with-sums-and-integrals" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Commands</th>
+<th style="text-align: center;">After rendering</th>
+<th style="text-align: center;">Commands</th>
+<th style="text-align: center;">After rendering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\sum</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sum\)</span></td>
+<td style="text-align: center;"><code>\prod</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\prod\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\coprod</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\coprod\)</span></td>
+<td style="text-align: center;"><code>\bigoplus</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigoplus\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\bigotimes</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigotimes\)</span></td>
+<td style="text-align: center;"><code>\bigodot</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigodot\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>bigcup</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigcup\)</span></td>
+<td style="text-align: center;"><code>bigcap</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigcap\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\biguplus</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\biguplus\)</span></td>
+<td style="text-align: center;"><code>\bigsqcup</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigsqcup\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\bigvee</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigvee\)</span></td>
+<td style="text-align: center;"><code>\bigwedge</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigwedge\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\int</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\int\)</span></td>
+<td style="text-align: center;"><code>\oint</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\oint\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\iint</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\iint\)</span></td>
+<td style="text-align: center;"><code>\iiint</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\iiint\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\iiiint</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\iiiint\)</span></td>
+<td style="text-align: center;"><code>\idotsint</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\idotsint\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="brackets-braces-and-delimiters">Brackets, braces and delimiters<a class="headerlink" href="#brackets-braces-and-delimiters" title="Permanent link">¶</a></h4>
+<p>10 delimiters in total.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Before rendering</th>
+<th style="text-align: center;">After rendering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>(a)</code></td>
+<td style="text-align: center;"><span class="arithmatex">\((a)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[b]</code> or <code>\lbrack b\rbrack</code></td>
+<td style="text-align: center;"><span class="arithmatex">\([b]\)</span> or <span class="arithmatex">\(\lbrack b\rbrack\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\{c\}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{c\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\|d\|</code>*</td>
+<td style="text-align: center;"><span class="arithmatex">\(\|d\|\)</span>*</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\\|e\\|</code>**</td>
+<td style="text-align: center;">$\</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\langle f\rangle</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\langle f\rangle\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\lfloor g\rfloor</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\lfloor g\rfloor\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\lceil h\rceil</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\lceil h\rceil\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\ulcorner i\urcorner</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ulcorner i\urcorner\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>/j\backslash</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(/j\backslash\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>*: Before rendering, it's <code>|d|</code>.</p>
+<p>**: Before rendering, it's <code>\|e\|</code>.</p>
+<p>If you view the original code the Markdown at the * and ** place, you will see <code>\|d\|</code> instead of <code>|d|</code> at * and <code>\\|e\\|</code> instead of <code>\|e\|</code>. That's because I'm using the <code>|</code> in the table environment and all <code>|</code> should be replaced by <code>\|</code> in the table. In all other cases, you should just let the <code>|</code> as it is.</p>
+<p>Don't confuse the <code>\|d\|</code> in the table environment with <code>\|d\|</code> in other environments. The former one will be rendered as <span class="arithmatex">\(|d|\)</span> and the latter one will be <span class="arithmatex">\(\|d\|\)</span> WHILE YOU ARE USING GITHUB. <strong>Mkdocs has a different strategy when rendering LaTeX formula in the table environment, you need to give it a try.</strong></p>
+</blockquote>
+<p>The effect in Visual Studio Code.</p>
+<center><img alt="img" src="/img/6.png"/></center>
+<h4 id="automatic-sizing">Automatic sizing<a class="headerlink" href="#automatic-sizing" title="Permanent link">¶</a></h4>
+<p>Three commands: <code>\left</code>, <code>\right</code> and <code>\middle</code>.</p>
+<p>The three commands must be used with the 10 delimiters mentioned <a href="#Brackets-braces-and-delimiters">above</a></p>
+<p><strong>Without automatically sizing:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Before rendering</th>
+<th style="text-align: center;">After rendering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>(\frac{x^2}{y^3})</code></td>
+<td style="text-align: center;"><span class="arithmatex">\((\frac{x^2}{y^3})\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>P(A=2\|\frac{A^2}{B}&gt;4)</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(P(A=2\|\frac{A^2}{B}&gt;4)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\{\frac{x^2}{y^3}\}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{\frac{x^2}{y^3}\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\frac{x^3}{3}\|^1_0</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{x^3}{3}\|^1_0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>With automatically sizing:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Before rendering</th>
+<th style="text-align: center;">After rendering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\left(\frac{x^2}{y^3}\left)</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\left(\frac{x^2}{y^3}\right)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>P\left(A=2\middle\|\frac{A^2}{B}&gt;4\right)</code>*</td>
+<td style="text-align: center;"><span class="arithmatex">\(P\left(A=2\middle\|\frac{A^2}{B}&gt;4\right)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\{\frac{x^2}{y^3}\}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\left\{\frac{x^2}{y^3}\right\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\frac{x^3}{3}\|^1_0</code>*</td>
+<td style="text-align: center;"><span class="arithmatex">\(\left.\frac{x^3}{3}\right\|^1_0\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>*: There is an issue the same as <a href="#Brackets-braces-and-delimiters">before</a>, <code>|</code> or <code>\|</code> in the table environment.</p>
+</blockquote>
+<p>Using automatic sizing can make the formula more beautiful and clear.</p>
+<h4 id="manual-sizing">Manual sizing<a class="headerlink" href="#manual-sizing" title="Permanent link">¶</a></h4>
+<p>Four commands: <code>\big</code>, <code>\Big</code>, <code>\bigg</code> and <code>\Bigg</code>.</p>
+<p>You can also add <code>l</code> or <code>r</code> after the four commands above to form commands like <code>\bigl</code>, <code>\Biggr</code> and so on.</p>
+<p><code>l</code> stands for left, <code>r</code> for right, and they are not necessary.</p>
+<p>The four commands must be used with the 10 delimiters mentioned <a href="#Brackets-braces-and-delimiters">above</a>.</p>
+<p>From <code>\big</code> to <code>\Bigg</code>, it is getting bigger and bigger.</p>
+<center>( \big( \Big( \bigg( \Bigg(</center>
+<div class="arithmatex">\[\downarrow\]</div>
+<div class="arithmatex">\[( \big( \Big( \bigg( \Bigg(\]</div>
+<p>An example:</p>
+<div class="arithmatex">\[\frac{\mathrm{d}}{\mathrm{d}x}(kg(x))=\frac{\mathrm{d}}{\mathrm{d}x}\big(kg(x)\big)=\frac{\mathrm{d}}{\mathrm{d}x}\Big(kg(x)\Big)=\frac{\mathrm{d}}{\mathrm{d}x}\bigg(kg(x)\bigg)=\frac{\mathrm{d}}{\mathrm{d}x}\Bigg(kg(x)\Bigg)\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>$$\frac{\mathrm{d}}{\mathrm{d}x}(kg(x))=\frac{\mathrm{d}}{\mathrm{d}x}\big(kg(x)\big)=\frac{\mathrm{d}}{\mathrm{d}x}\Big(kg(x)\Big)=\frac{\mathrm{d}}{\mathrm{d}x}\bigg(kg(x)\bigg)=\frac{\mathrm{d}}{\mathrm{d}x}\Bigg(kg(x)\Bigg)$$</code></p>
+</details>
+<h4 id="matrices-and-arrays">Matrices and arrays<a class="headerlink" href="#matrices-and-arrays" title="Permanent link">¶</a></h4>
+<p>An example:</p>
+<div class="arithmatex">\[A=\begin{pmatrix}a_{11}&amp;a_{12}&amp;a_{13}&amp;\ldots&amp;a_{1n}\\a_{21}&amp;a_{22}&amp;a_{23}&amp;\ldots&amp;a_{2n}\\a_{31}&amp;a_{32}&amp;a_{33}&amp;\ldots&amp;a_{3n}\\\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\a_{n1}&amp;a_{n2}&amp;a_{n3}&amp;\ldots&amp;a_{nn}\\\end{pmatrix},tr(A)=\sum_{i=1}^na_{ii}\]</div>
+<p>Use an ampersand (<code>&amp;</code>) to seprate the columns and a double backslash (<code>\\</code>) to new a row.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Environment name</th>
+<th style="text-align: center;">Surrounding delimiter</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">matrix</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">centers columns by default</td>
+</tr>
+<tr>
+<td style="text-align: center;">matrix*</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">allows to specify alignment of columns in optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: center;">pmatrix</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle (\,)}\)</span></td>
+<td style="text-align: center;">centers columns by default</td>
+</tr>
+<tr>
+<td style="text-align: center;">pmatrix*</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle (\,)}\)</span></td>
+<td style="text-align: center;">allows to specify alignment of columns in optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: center;">bmatrix</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle [\,]}\)</span></td>
+<td style="text-align: center;">centers columns by default</td>
+</tr>
+<tr>
+<td style="text-align: center;">bmatrix*</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle [\,]}\)</span></td>
+<td style="text-align: center;">allows to specify alignment of columns in optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bmatrix</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle \{\,\}}\)</span></td>
+<td style="text-align: center;">centers columns by default</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bmatrix*</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle \{\,\}}\)</span></td>
+<td style="text-align: center;">allows to specify alignment of columns in optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: center;">vmatrix</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle \|\,\|}\)</span></td>
+<td style="text-align: center;">centers columns by default</td>
+</tr>
+<tr>
+<td style="text-align: center;">vmatrix*</td>
+<td style="text-align: center;"><span class="arithmatex">\({\displaystyle \|\,\|}\)</span></td>
+<td style="text-align: center;">allows to specify alignment of columns in optional parameter</td>
+</tr>
+<tr>
+<td style="text-align: center;">Vmatrix</td>
+<td style="text-align: center;">${\displaystyle \</td>
+<td style="text-align: center;">\,\</td>
+</tr>
+<tr>
+<td style="text-align: center;">Vmatrix*</td>
+<td style="text-align: center;">${\displaystyle \</td>
+<td style="text-align: center;">\,\</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>There is an issue the same as <a href="#Brackets-braces-and-delimiters">before</a>, <code>|</code> or <code>\|</code> in the table environment.</p>
+</blockquote>
+<p>To specify alignment of columns in the table, use starred version:</p>
+<div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>matrix*<span class="nb">}</span>[r]
+  -1 <span class="nb">&amp;</span> 3 <span class="k">\\</span>
+  2 <span class="nb">&amp;</span> -4
+<span class="k">\end</span><span class="nb">{</span>matrix*<span class="nb">}</span>
+</code></pre></div>
+<p>The default choice is <code>c</code>.</p>
+<p>Markdown only supports basic LaTeX. Any matrix environment with <code>*</code> is not supported both on the GitHub platform and in Mkdocs.</p>
+<p>Three kinds of dots often used in matrices:</p>
+<p><code>\cdots</code>, <code>\rdots</code> and <code>\ddots</code>.</p>
+<p><span class="arithmatex">\(\cdots\)</span>, <span class="arithmatex">\(\vdots\)</span> and <span class="arithmatex">\(\ddots\)</span></p>
+<p>In some cases, you may want to have finer control of the alignment within each column, or to insert lines between columns or rows. This can be achieved using the array environment. Here is an example:</p>
+<div class="arithmatex">\[
+\begin{array}{|c|cc|}
+  1 &amp; 2 &amp;3\\ 
+  \hline
+  4 &amp; 5 &amp;6\\
+  7 &amp; 8 &amp;9\\
+  \hline
+\end{array}
+\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>\begin{array}{cc|c}1 &amp; 2 &amp;3\\ \hline 4 &amp; 5 &amp;6\\7 &amp; 8 &amp;9\end{array}</code></p>
+</details>
+<p>Use <code>\hline</code> to add a horizonal line. You should use <code>\\</code> to switch to a new line before using <code>\hline</code> but you should not add <code>\\</code> after the <code>\hline</code> because it will switch to a new line automatically.</p>
+<p>Add <code>|</code> between <code>c</code> in the <code>{}</code> to specify the position of the vertical line. Example: when there are 3 columns, <code>{c|cc}</code> will render a vertical line between the first and the second column and <code>{cc|c}</code> will render a vertical line between the second and the third column. You can also add multiple vertical lines.</p>
+<p>But using the <code>array</code> environment, you can't warp your matrix in parentheses or brackets.</p>
+<p>After each <code>\\</code>, you can specify the distance between the lines by adding the distance you want warpped in a pair of brackets.</p>
+<p><strong>Without specifying the distance (a little tightened):</strong></p>
+<div class="arithmatex">\[
+M = \begin{bmatrix}
+       \frac{5}{6} &amp; \frac{1}{6} &amp; 0           \\
+       \frac{5}{6} &amp; 0           &amp; \frac{1}{6} \\
+       0           &amp; \frac{5}{6} &amp; \frac{1}{6}
+     \end{bmatrix}
+\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>M = \begin{bmatrix}\frac{5}{6} &amp; \frac{1}{6} &amp; 0 \\ \frac{5}{6} &amp; 0 &amp; \frac{1}{6} \\ 0 &amp; \frac{5}{6} &amp; \frac{1}{6}\end{bmatrix}</code></p>
+</details>
+<p><strong>Specifying the distance to 0.3em (much more loose):</strong></p>
+<div class="arithmatex">\[
+M = \begin{bmatrix}
+       \frac{5}{6} &amp; \frac{1}{6} &amp; 0           \\[0.3em]
+       \frac{5}{6} &amp; 0           &amp; \frac{1}{6} \\[0.3em]
+       0           &amp; \frac{5}{6} &amp; \frac{1}{6}
+     \end{bmatrix}
+\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>M = \begin{bmatrix}\frac{5}{6} &amp; \frac{1}{6} &amp; 0 \\[0.3em] \frac{5}{6} &amp; 0 &amp; \frac{1}{6} \\[0.3em] 0 &amp; \frac{5}{6} &amp; \frac{1}{6}\end{bmatrix}</code></p>
+</details>
+<p>If you need "border" or "indexes" on your matrix, plain TeX provides the macro <code>\bordermatrix</code>, but it is not available in either GitHub or Mkdocs.</p>
+<p>You can use the macro like this:</p>
+<div class="highlight"><pre><span></span><code>M = <span class="k">\bordermatrix</span><span class="nb">{</span>~ <span class="nb">&amp;</span> x <span class="nb">&amp;</span> y <span class="k">\cr</span>
+                  A <span class="nb">&amp;</span> 1 <span class="nb">&amp;</span> 0 <span class="k">\cr</span>
+                  B <span class="nb">&amp;</span> 0 <span class="nb">&amp;</span> 1 <span class="k">\cr</span><span class="nb">}</span>
+</code></pre></div>
+<p>To insert a small matrix without increasing leading in the line containing it, use <code>smallmatrix</code> environment:</p>
+<p>You should use the smallmatrix environment along with the <code>\big(</code> and other similar commands.</p>
+<p>Example:</p>
+<p>A matrix in text must be set smaller A matrix in text must be set smaller A matrix in text must be set smaller:<span class="arithmatex">\(\bigl(\begin{smallmatrix}a&amp;b \\ c&amp;d\end{smallmatrix} \bigr)\)</span>to not increase leading in a portion of text to not increase leading in a portion of textto not increase leading in a portion of text.</p>
+<div class="arithmatex">\[\bigl(\begin{smallmatrix}a&amp;b \\ c&amp;d\end{smallmatrix} \bigr)\]</div>
+<h4 id="adding-text-to-equations">Adding text to equations<a class="headerlink" href="#adding-text-to-equations" title="Permanent link">¶</a></h4>
+<p>Use <code>\text</code> to display text within a LaTeX formula.</p>
+<p>If you want additional features, use <code>\textrm</code>, <code>\textit</code>, <code>\textbf</code>, etc. <code>\textit</code> will produce italic words and <code>textbf</code> will produce bold font and <code>\textrm</code> uses the roman font.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">LaTeX command</th>
+<th style="text-align: center;">Sample</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: left;">Common use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\mathnormal{…}</code>(or simply omit any command)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathnormal{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">The default math font</td>
+<td style="text-align: left;">Most mathematical notation</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathrm{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">This is the default or normal font, unitalicised</td>
+<td style="text-align: left;">Units of measurement, one word functions</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathit{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathit{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">Italicised font</td>
+<td style="text-align: left;">Multi-letter function or variable names. Compared to <code>\mathnormal</code>, words are spaced more naturally and numbers are italicized as well.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathbf{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathbf{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">Bold font</td>
+<td style="text-align: left;">Vectors</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathsf{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathsf{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">Sans-serif</td>
+<td style="text-align: left;">Categories</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathtt{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathtt{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">Monospace (fixed-width) font</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathfrak{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathfrak{ABCDEF\;\,abcdef\;\,123456}\)</span></td>
+<td style="text-align: center;">Fraktur</td>
+<td style="text-align: left;">Almost canonical font for Lie algebras, ideals in ring theory</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathcal{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathcal{ABCDEF}\)</span></td>
+<td style="text-align: center;">Calligraphy (uppercase only)</td>
+<td style="text-align: left;">Often used for sheaves/schemes and categories, used to denote cryptological concepts like an <em>alphabet of definition</em> (<span class="arithmatex">\(\mathcal{A}\)</span>), <em>message space</em> (<span class="arithmatex">\(\mathcal{M}\)</span>), <em>ciphertext space</em> (<span class="arithmatex">\(\mathcal{C}\)</span>) and <em>key space</em> (<span class="arithmatex">\(\mathcal{K}\)</span>); Kleene's (<span class="arithmatex">\(\mathcal{O}\)</span>); naming convention in description logic; Laplace transform (<span class="arithmatex">\(\mathcal{L}\)</span>) and Fourier transform (<span class="arithmatex">\(\mathcal{F}\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathbb{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathbb{ABCDEF}\)</span></td>
+<td style="text-align: center;">Blackboard bold (uppercase only)</td>
+<td style="text-align: left;">Used to denote special sets (e.g. real numbers)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\mathscr{…}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathscr{ABCDEF}\)</span></td>
+<td style="text-align: center;">Script (uppercase only)</td>
+<td style="text-align: left;">An alternative font for categories and sheaves.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<p><code>\mathnormal{…}</code> is not supported in Mkdocs but is supported in GitHub.<br/>These formatting commands can be wrapped around the entire equation, and not just on the textual elements: they only format letters, numbers, and uppercase Greek, and other math commands are unaffected.</p>
+</div>
+<p>To bold lowercase Greek or other symbols, you can use the <code>\boldsymbol</code> command; this will only work if there exists a bold version of the symbol in the current font.</p>
+<p>As a last resort there is the <code>\pmb</code> command (poor man's bold): this prints multiple versions of the character slightly offset against each other.</p>
+<p>Example:</p>
+<div class="arithmatex">\[\pmb{\beta} = (\beta_1,\beta_2,\dotsc,\beta_n)\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>\boldsymbol</code> is not supported in Markdown but is supported in Mkdocs.</p>
+</div>
+<h4 id="some-accents">Some accents<a class="headerlink" href="#some-accents" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Command</th>
+<th style="text-align: center;">Effect</th>
+<th style="text-align: center;">Command</th>
+<th style="text-align: center;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>a'</code> or <code>a^{\prime}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(a'\)</span> or <span class="arithmatex">\(a^{\prime}\)</span></td>
+<td style="text-align: center;"><code>a''</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(a''\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\hat{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\hat{a}\)</span></td>
+<td style="text-align: center;"><code>\bar{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bar{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\grave{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\grave{a}\)</span></td>
+<td style="text-align: center;"><code>\acute{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\acute{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\dot{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dot{a}\)</span></td>
+<td style="text-align: center;"><code>\ddot{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ddot{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\not{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\not{a}\)</span></td>
+<td style="text-align: center;"><code>\mathring{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mathring{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\overrightarrow{AB}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\overrightarrow{AB}\)</span></td>
+<td style="text-align: center;"><code>\overleftarrow{AB}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\overleftarrow{AB}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>a'''</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(a'''\)</span></td>
+<td style="text-align: center;"><code>a''''</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(a''''\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\overline{aaa}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\overline{aaa}\)</span></td>
+<td style="text-align: center;"><code>\check{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\check{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\breve{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\breve{a}\)</span></td>
+<td style="text-align: center;"><code>\vec{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vec{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\dddot{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dddot{a}\)</span></td>
+<td style="text-align: center;"><code>\ddddot{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ddddot{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\widehat{AAA}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\widehat{AAA}\)</span></td>
+<td style="text-align: center;"><code>\widetilde{AAA}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\widetilde{AAA}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\stackrel\frown{AAA}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\stackrel\frown{AAA}\)</span></td>
+<td style="text-align: center;"><code>\tilde{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\tilde{a}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\underline{a}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\underline{a}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><code>\prime</code> will render the same as <code>'</code>.</p>
+<p><code>\ddddot{}</code> will render the most <code>·</code> in number. There is not a commend like <del>"\dddddot{}"</del>.</p>
+<h4 id="color">Color<a class="headerlink" href="#color" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(k = {\color{red}x} \mathbin {\color{blue}-} 2\)</span></p>
+<p>The only problem is that this disrupts the default LaTeX formatting around the - operator. To fix this, we enclose it in a <code>\mathbin</code> environment, since <code>-</code> is a binary operator.</p>
+<h4 id="plus-and-minus-signs">Plus and minus signs<a class="headerlink" href="#plus-and-minus-signs" title="Permanent link">¶</a></h4>
+<p><code>\pm</code> <span class="arithmatex">\(\rightarrow \pm\)</span></p>
+<p><code>\mp</code> <span class="arithmatex">\(\rightarrow \mp\)</span></p>
+<p>LaTeX deals with the <code>+</code> and <code>−</code> signs in two possible ways. The most common is as a binary operator. When two maths elements appear on either side of the sign, it is assumed to be a binary operator, and as such, allocates some space to either side of the sign. The alternative way is a sign designation. This is when you state whether a mathematical quantity is either positive or negative. This is common for the latter, as in math, such elements are assumed to be positive unless a <code>−</code> is prefixed to it. In this instance, you want the sign to appear close to the appropriate element to show their association. If you put a <code>+</code> or a <code>−</code> with nothing before it but you want it to be handled like a binary operator you can add an <em>invisible</em> character before the operator using <code>{}</code>. This can be useful if you are writing multiple-line formulas, and a new line could start with a <code>−</code> or <code>+</code>, for example, then you can fix some strange alignments adding the invisible character where necessary.</p>
+<h4 id="controlling-horizontal-spacing">Controlling horizontal spacing<a class="headerlink" href="#controlling-horizontal-spacing" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[f(n) =
+  \begin{cases}
+    n/2       &amp; \quad \text{if } n \text{ is even}\\
+    -(n+1)/2  &amp; \quad \text{if } n \text{ is odd}
+  \end{cases}
+\]</div>
+<details class="note">
+<summary>Original code</summary>
+<p><code>f(n) = \begin{cases} n/2 &amp; \quad \text{if } n \text{ is even} \\ -(n+1)/2 &amp; \quad \text{if } n \text{ is odd} \end{cases}</code></p>
+</details>
+<p><code>cases</code> environment usage.</p>
+<p>LaTeX has defined two commands that can be used anywhere in documents (not just <code>maths</code>) to insert some horizontal space. They are <code>\quad</code> and <code>\qquad</code>.</p>
+<p>A <code>\quad</code> is a space equal to the current font size and the <code>\qquad</code> gives twice that amount.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Command</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\,</code></td>
+<td style="text-align: center;">small space</td>
+<td style="text-align: center;">3/18 of a quad</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\:</code></td>
+<td style="text-align: center;">medium space</td>
+<td style="text-align: center;">4/18 of a quad</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\;</code></td>
+<td style="text-align: center;">large space</td>
+<td style="text-align: center;">5/18 of a quad</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\!</code></td>
+<td style="text-align: center;">negative space</td>
+<td style="text-align: center;">-3/18 of a quad</td>
+</tr>
+</tbody>
+</table>
+<p>NB you can use more than one command in a sequence to achieve a greater space if necessary.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>NB, N.B., nb and n.b. is the abbrviation of <code>nota bene</code> (/ˈnoʊtə ˈbɛneɪ/, /ˈnoʊtə ˈbɛni/ or /ˈnoʊtə ˈbiːni/; plural: notate bene) in Latin.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> Here <code>NB</code> is used to draw the reader's attention.</p>
+</div>
+<h4 id="manually-specifying-formula-style">Manually Specifying Formula Style<a class="headerlink" href="#manually-specifying-formula-style" title="Permanent link">¶</a></h4>
+<p>To manually display a fragment of a formula using text style, surround the fragment with curly braces and prefix the fragment with <code>\textstyle</code>. E.g. <code>{\textstyle \sum_k}</code></p>
+<p>To display part of a formula using display style, do the same thing, but use <code>\displaystyle</code> instead.</p>
+<h4 id="dots-in-formulas">Dots in formulas<a class="headerlink" href="#dots-in-formulas" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\dots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dots\)</span></td>
+<td style="text-align: left;">generic dots (ellipsis), to be used in text (outside formulae as well). It automatically manages whitespaces before and after itself according to the context, it's a higher level command.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\ldots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ldots\)</span></td>
+<td style="text-align: left;">the output is similar to the previous one, but there is no automatic whitespace management; it works at a lower level.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\cdots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: left;">These dots are centered relative to the height of a letter. There is also the binary multiplication operator, \cdot, mentioned below.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\vdots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: left;">vertical dots</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\ddots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ddots\)</span></td>
+<td style="text-align: left;">diagonal dots</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\iddots</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\iddots\)</span></td>
+<td style="text-align: left;">inverse diagonal dots (requires the mathdots package)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\hdotsfor{n}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\hdotsfor{n}\)</span></td>
+<td style="text-align: left;">to be used in matrices, it creates a row of dots spanning <em>n</em> columns.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>\iddots</code> and <code>\hdotsfor{n}</code> are not supported in both GitHub and Mkdocs.</p>
+</div>
+<p>Instead of using <code>\ldots</code> and <code>\cdots</code>, you should use the semantically oriented commands. It makes it possible to adapt your document to different conventions on the fly, in case (for example) you have to submit it to a publisher who insists on following house tradition in this respect. The default treatment for the various kinds follows American Mathematical Society conventions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Code</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>A_1,A_2,\dotsc,</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(A_1,A_2,\dotsc,\)</span></td>
+<td style="text-align: left;">for "dots with commas"</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>A_1+\dotsb+A_N</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(A_1+\dotsb+A_N\)</span></td>
+<td style="text-align: left;">for "dots with binary operators/relations"</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>A_1 \dotsm A_N</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(A_1 \dotsm A_N\)</span></td>
+<td style="text-align: left;">for "multiplication dots"</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\int_a^b \dotsi</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\int_a^b \dotsi\)</span></td>
+<td style="text-align: left;">for "dots with integrals"</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>A_1\dotso A_N</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(A_1\dotso A_N\)</span></td>
+<td style="text-align: left;">for "other dots" (none of the above)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="list-of-mathematical-symbols">List of mathematical symbols<a class="headerlink" href="#list-of-mathematical-symbols" title="Permanent link">¶</a></h4>
+<p><strong><center>Relation Symbols</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&lt;\)</span></td>
+<td style="text-align: center;"><code>&lt;</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(&gt;\)</span></td>
+<td style="text-align: center;"><code>&gt;</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(=\)</span></td>
+<td style="text-align: center;"><code>=</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\parallel\)</span></td>
+<td style="text-align: center;"><code>\parallel</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\nparallel\)</span></td>
+<td style="text-align: center;"><code>\nparallel</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\leq\)</span></td>
+<td style="text-align: center;"><code>leq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\geq\)</span></td>
+<td style="text-align: center;"><code>\geq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\doteq\)</span></td>
+<td style="text-align: center;"><code>\doteq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\asymp\)</span></td>
+<td style="text-align: center;"><code>\asymp</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bowtie\)</span></td>
+<td style="text-align: center;"><code>\bowtie</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\ll\)</span></td>
+<td style="text-align: center;"><code>\ll</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\gg\)</span></td>
+<td style="text-align: center;"><code>\gg</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\equiv\)</span></td>
+<td style="text-align: center;"><code>\equiv</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdash\)</span></td>
+<td style="text-align: center;"><code>\vdash</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\dashv\)</span></td>
+<td style="text-align: center;"><code>\dashv</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\subset\)</span></td>
+<td style="text-align: center;"><code>\subset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\supset\)</span></td>
+<td style="text-align: center;"><code>\supset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx\)</span></td>
+<td style="text-align: center;"><code>\approx</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\in\)</span></td>
+<td style="text-align: center;"><code>\in</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ni\)</span></td>
+<td style="text-align: center;"><code>\ni</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\subseteq\)</span></td>
+<td style="text-align: center;"><code>\subseteq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\supseteq\)</span></td>
+<td style="text-align: center;"><code>\supseteq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cong\)</span></td>
+<td style="text-align: center;"><code>\cong</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\smile\)</span></td>
+<td style="text-align: center;"><code>\smile</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frown\)</span></td>
+<td style="text-align: center;"><code>\frown</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\nsubseteq\)</span></td>
+<td style="text-align: center;"><code>\nsubseteq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\nsupseteq\)</span></td>
+<td style="text-align: center;"><code>\nsupseteq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\simeq\)</span></td>
+<td style="text-align: center;"><code>\simeq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\models\)</span></td>
+<td style="text-align: center;"><code>\models</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\notin\)</span></td>
+<td style="text-align: center;"><code>\notin</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\sqsubset\)</span></td>
+<td style="text-align: center;"><code>\sqsubset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sqsupset\)</span></td>
+<td style="text-align: center;"><code>\sqsupset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sim\)</span></td>
+<td style="text-align: center;"><code>\sim</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\perp\)</span></td>
+<td style="text-align: center;"><code>\perp</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mid\)</span></td>
+<td style="text-align: center;"><code>\mid</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\preceq\)</span></td>
+<td style="text-align: center;"><code>\preceq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\succeq\)</span></td>
+<td style="text-align: center;"><code>\succeq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\neq\)</span></td>
+<td style="text-align: center;"><code>\neq</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sphericalangle\)</span></td>
+<td style="text-align: center;"><code>\sphericalangle</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\measuredangle\)</span></td>
+<td style="text-align: center;"><code>\measuredangle</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\therefore\)</span></td>
+<td style="text-align: center;"><code>\therefore</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\because\)</span></td>
+<td style="text-align: center;"><code>\because</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong><center>Binary Operations</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\pm\)</span></td>
+<td style="text-align: center;"><code>\pm</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cap\)</span></td>
+<td style="text-align: center;"><code>\cap</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\diamond\)</span></td>
+<td style="text-align: center;"><code>\diamond</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\oplus\)</span></td>
+<td style="text-align: center;"><code>\oplus</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\mp\)</span></td>
+<td style="text-align: center;"><code>\mp</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cup\)</span></td>
+<td style="text-align: center;"><code>\cup</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigtriangleup\)</span></td>
+<td style="text-align: center;"><code>\bigtriangleup</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ominus\)</span></td>
+<td style="text-align: center;"><code>\ominus</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\times\)</span></td>
+<td style="text-align: center;"><code>\times</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\uplus\)</span></td>
+<td style="text-align: center;"><code>\uplus</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigtriangledown\)</span></td>
+<td style="text-align: center;"><code>\bigtriangledown</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\otimes\)</span></td>
+<td style="text-align: center;"><code>\otimes</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\div\)</span></td>
+<td style="text-align: center;"><code>\div</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sqcap\)</span></td>
+<td style="text-align: center;"><code>\sqcap</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\triangleleft\)</span></td>
+<td style="text-align: center;"><code>\triangleleft</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\oslash\)</span></td>
+<td style="text-align: center;"><code>\oslash</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\ast\)</span></td>
+<td style="text-align: center;"><code>\ast</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sqcup\)</span></td>
+<td style="text-align: center;"><code>\sqcup</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\triangleright\)</span></td>
+<td style="text-align: center;"><code>\triangleright</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\odot\)</span></td>
+<td style="text-align: center;"><code>\odot</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\star\)</span></td>
+<td style="text-align: center;"><code>\star</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vee\)</span></td>
+<td style="text-align: center;"><code>\vee</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bigcirc\)</span></td>
+<td style="text-align: center;"><code>\bigcirc</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\circ\)</span></td>
+<td style="text-align: center;"><code>\circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\dagger\)</span></td>
+<td style="text-align: center;"><code>\dagger</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\wedge\)</span></td>
+<td style="text-align: center;"><code>\wedge</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bullet\)</span></td>
+<td style="text-align: center;"><code>\bullet</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\setminus\)</span></td>
+<td style="text-align: center;"><code>\setminus</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\ddagger\)</span></td>
+<td style="text-align: center;"><code>\ddagger</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdot\)</span></td>
+<td style="text-align: center;"><code>\cdot</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\wr\)</span></td>
+<td style="text-align: center;"><code>\wr</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\amalg\)</span></td>
+<td style="text-align: center;"><code>\amalg</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><center>Set and/or Logic Notation</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\exists\)</span></td>
+<td style="text-align: center;"><code>\exists</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\to\)</span></td>
+<td style="text-align: center;"><code>\rightarrow</code> or <code>\to</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\nexists\)</span></td>
+<td style="text-align: center;"><code>\nexists</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\gets\)</span></td>
+<td style="text-align: center;"><code>\leftarrow</code> or <code>\gets</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\forall\)</span></td>
+<td style="text-align: center;"><code>\forall</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\mapsto\)</span></td>
+<td style="text-align: center;"><code>\mapsto</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\neg\)</span></td>
+<td style="text-align: center;"><code>\neg</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\implies\)</span></td>
+<td style="text-align: center;"><code>\implies</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cap\)</span></td>
+<td style="text-align: center;"><code>\cap</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cup\)</span></td>
+<td style="text-align: center;"><code>\cup</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\subset\)</span></td>
+<td style="text-align: center;"><code>\subset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\impliedby\)</span></td>
+<td style="text-align: center;"><code>\impliedby</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\supset\)</span></td>
+<td style="text-align: center;"><code>\supset</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Rightarrow\)</span></td>
+<td style="text-align: center;"><code>\Rightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\in\)</span></td>
+<td style="text-align: center;"><code>\in</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\implies\)</span></td>
+<td style="text-align: center;"><code>\leftrightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\notin\)</span></td>
+<td style="text-align: center;"><code>\notin</code></td>
+<td style="text-align: center;">$\iff$</td>
+<td style="text-align: center;"><code>\iff</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\ni\)</span></td>
+<td style="text-align: center;"><code>\ni</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Leftrightarrow\)</span></td>
+<td style="text-align: center;"><code>\Leftrightarrow</code> (preferred for equivalence (iff))</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\land\)</span></td>
+<td style="text-align: center;"><code>\land</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\top\)</span></td>
+<td style="text-align: center;"><code>\top</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\lor\)</span></td>
+<td style="text-align: center;"><code>\lor</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\bot\)</span></td>
+<td style="text-align: center;"><code>\bot</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\angle\)</span></td>
+<td style="text-align: center;"><code>\angle</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\emptyset\)</span> and <span class="arithmatex">\(\varnothing\)</span></td>
+<td style="text-align: center;"><code>\emptyset</code> and <code>\varnothing</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(\rightleftharpoons\)</span></td>
+<td style="text-align: center;"><code>\rightleftharpoons</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><center>Delimiters</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\mid\)</span></td>
+<td style="text-align: center;"><code>\|</code> or <code>\mid</code> (difference in spacing)</td>
+<td style="text-align: center;">$\</td>
+<td style="text-align: center;">$</td>
+<td style="text-align: center;"><code>\\|</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(/\)</span></td>
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\backslash\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\{\)</span></td>
+<td style="text-align: center;"><code>\{</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\}\)</span></td>
+<td style="text-align: center;"><code>\}</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\langle\)</span></td>
+<td style="text-align: center;"><code>\langel</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\rangle\)</span></td>
+<td style="text-align: center;"><code>\rangle</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\uparrow\)</span></td>
+<td style="text-align: center;"><code>\uparrow</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Uparrow\)</span></td>
+<td style="text-align: center;"><code>\Uparrow</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\lceil\)</span></td>
+<td style="text-align: center;"><code>\lceil</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\rceil\)</span></td>
+<td style="text-align: center;"><code>\rceil</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\downarrow\)</span></td>
+<td style="text-align: center;"><code>\downarrow</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Downarrow\)</span></td>
+<td style="text-align: center;"><code>\Downarrow</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\lfloor\)</span></td>
+<td style="text-align: center;"><code>\lfloor</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\rfloor\)</span></td>
+<td style="text-align: center;"><code>\rfloor</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <code>\stackrel{}</code> command to display something right upon a sign. E.g. use <code>\stackrel{\triangle}=</code> to display this: <span class="arithmatex">\(\stackrel{\triangle}\rightleftharpoons\)</span>.</p>
+</div>
+<p><strong><center>Greek Letters</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(\alpha\)</span></td>
+<td style="text-align: center;"><code>A</code> and <code>\alpha</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(N\)</span> and <span class="arithmatex">\(\nu\)</span></td>
+<td style="text-align: center;"><code>N</code> and <code>\nu</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(\beta\)</span></td>
+<td style="text-align: center;"><code>B</code> and <code>\beta</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Xi\)</span> and <span class="arithmatex">\(\xi\)</span></td>
+<td style="text-align: center;"><code>\Xi</code> and <code>\xi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\Gamma\)</span> and <span class="arithmatex">\(\gamma\)</span></td>
+<td style="text-align: center;"><code>\Gamma</code> and <code>\gamma</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(O\)</span> and <span class="arithmatex">\(o\)</span></td>
+<td style="text-align: center;"><code>O</code> and <code>o</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\Delta\)</span> and <span class="arithmatex">\(\delta\)</span></td>
+<td style="text-align: center;"><code>\Delta</code> and <code>\delta</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Pi\)</span>, <span class="arithmatex">\(\pi\)</span> and <span class="arithmatex">\(\varpi\)</span></td>
+<td style="text-align: center;"><code>\Pi</code>, <code>\pi</code> and <code>\varpi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\epsilon\)</span> and <span class="arithmatex">\(\varepsilon\)</span></td>
+<td style="text-align: center;"><code>E</code>, <code>\epsilon</code> and <code>\varepsilon</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(\rho\)</span> and <span class="arithmatex">\(\varrho\)</span></td>
+<td style="text-align: center;"><code>P</code>, <code>\rho</code> and <code>\varrho</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(Z\)</span> and <span class="arithmatex">\(\zeta\)</span></td>
+<td style="text-align: center;"><code>Z</code> and <code>\zeta</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Sigma\)</span>, <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(\varsigma\)</span></td>
+<td style="text-align: center;"><code>\Sigma</code>, <code>\sigma</code> and <code>\varsigma</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(H\)</span> and <span class="arithmatex">\(\eta\)</span></td>
+<td style="text-align: center;"><code>H</code> and <code>\eta</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(\tau\)</span></td>
+<td style="text-align: center;"><code>T</code> and <code>\tau</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\Theta\)</span>, <span class="arithmatex">\(\theta\)</span> and <span class="arithmatex">\(\vartheta\)</span></td>
+<td style="text-align: center;"><code>\Theta</code>, <code>\theta</code> and <code>\vartheta</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(Y\)</span>, <span class="arithmatex">\(\Upsilon\)</span> and <span class="arithmatex">\(\upsilon\)</span></td>
+<td style="text-align: center;"><code>Y</code>, <code>\Upsilon</code> and <code>\upsilon</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(I\)</span> and <span class="arithmatex">\(\iota\)</span></td>
+<td style="text-align: center;"><code>I</code> and <code>\iota</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Phi\)</span>, <span class="arithmatex">\(\phi\)</span> and <span class="arithmatex">\(\varphi\)</span></td>
+<td style="text-align: center;"><code>\Phi</code>, <code>\phi</code> and <code>\varphi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(K\)</span>, <span class="arithmatex">\(\kappa\)</span> and <span class="arithmatex">\(\varkappa\)</span></td>
+<td style="text-align: center;"><code>K</code>, <code>\kappa</code> and <code>\varkappa</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\chi\)</span></td>
+<td style="text-align: center;"><code>X</code> and <code>\chi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\Lambda\)</span> and <span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: center;"><code>\Lambda</code> and <code>\lambda</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Psi\)</span> and <span class="arithmatex">\(\psi\)</span></td>
+<td style="text-align: center;"><code>\Psi</code> and <code>\psi</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(\mu\)</span></td>
+<td style="text-align: center;"><code>\M</code> and <code>\mu</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Omega\)</span> and <span class="arithmatex">\(\omega\)</span></td>
+<td style="text-align: center;"><code>\Omega</code> and <code>\omega</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>To use the Greek Letters in LaTeX that have the same appearance in the Latin alphabet, just use Latin: e.g., A instead of Alpha, B instead of Beta, etc.</p>
+</div>
+<p><strong><center>Other symbols</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\partial\)</span></td>
+<td style="text-align: center;"><code>\partial</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\imath\)</span></td>
+<td style="text-align: center;"><code>\imath</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Re\)</span></td>
+<td style="text-align: center;"><code>\Re</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\nabla\)</span></td>
+<td style="text-align: center;"><code>\nabla</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\aleph\)</span></td>
+<td style="text-align: center;"><code>\aleph</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\eth\)</span></td>
+<td style="text-align: center;"><code>\eth</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\jmath\)</span></td>
+<td style="text-align: center;"><code>\jmath</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Im\)</span></td>
+<td style="text-align: center;"><code>\Im</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\Box\)</span></td>
+<td style="text-align: center;"><code>\Box</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\beth\)</span></td>
+<td style="text-align: center;"><code>\beth</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\hbar\)</span></td>
+<td style="text-align: center;"><code>\hbar</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\ell\)</span></td>
+<td style="text-align: center;"><code>\ell</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\wp\)</span></td>
+<td style="text-align: center;"><code>\wp</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><code>\infty</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\gimel\)</span></td>
+<td style="text-align: center;"><code>\gimel</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><center>Trigonometric Functions</center></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\sin\)</span></td>
+<td style="text-align: center;"><code>\sin</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arcsin\)</span></td>
+<td style="text-align: center;"><code>\arcsin</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sinh\)</span></td>
+<td style="text-align: center;"><code>\sinh</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\sec\)</span></td>
+<td style="text-align: center;"><code>\sec</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cos\)</span></td>
+<td style="text-align: center;"><code>\cos</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arccos\)</span></td>
+<td style="text-align: center;"><code>\arccos</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cosh\)</span></td>
+<td style="text-align: center;"><code>\cosh</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\csc\)</span></td>
+<td style="text-align: center;"><code>\csc</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\tan\)</span></td>
+<td style="text-align: center;"><code>\tan</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arctan\)</span></td>
+<td style="text-align: center;"><code>\arctan</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\tanh\)</span></td>
+<td style="text-align: center;"><code>\tanh</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\cot\)</span></td>
+<td style="text-align: center;"><code>\cot</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\arccot\)</span>*</td>
+<td style="text-align: center;"><code>\arccot</code></td>
+<td style="text-align: center;"><span class="arithmatex">\(\coth\)</span></td>
+<td style="text-align: center;"><code>\coth</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>*: <code>\arccot</code> is not defined in Markdown or Mkdocs.</p>
+<p>For more advanced feature, please visit <a href="https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics">this link</a>.</p>
+<p>Some practices:</p>
+<div class="arithmatex">\[
+\lim_{x\to0}\frac{\mathrm{e}^x-1}{2x}\underset{\mathrm{H}}{\overset{\big[\frac{0}{0}\big]}{=}}\lim_{x\to0}\frac{\mathrm{e}^x}{2}=\frac{1}{2}
+\]</div>
+<div class="arithmatex">\[
+a=
+\begin{cases}
+\displaystyle \int x\,\mathrm{d}x\\
+b^2
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+f(x)=
+\begin{cases}
+x &amp; \text{when }x\text{ is even}\\
+-x &amp; \text{when }x\text{ is odd}\\
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+\left.\begin{aligned}
+B'=-\partial\times E,\\
+E'=\partial\times B-4\pi j,
+\end{aligned}\right\}\quad\text{Maxwell's equations}
+\]</div>
+<div class="arithmatex">\[
+\begin{gather*}
+a_0=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\,\mathrm{d}x\\
+a_n=\frac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\cos nx\,\mathrm{d}x
+\end{gather*}
+\]</div>
+<hr/>
+<p>This article is created from <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub Docs</a>, <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX Wikibooks(basic)</a> and <a href="https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics">LaTeX Wikibooks(advanced)</a>. </p>
+<p>The author has made some edits.</p>
+<p>Author: Morgan Willow Chen</p>
+<p>Last updated 08/11/2024</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>My reference. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>To add line breaks within a footnote, prefix new lines with 2 spaces. <br/>This is a second line. You should use the <code>&lt;br&gt;</code> tag to switch to a new line in Mkdocs. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>According to <a href="https://en.wikipedia.org/wiki/Nota_bene">Wikipedia</a>. <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 - 2025 Morgan Willow Chen. All rights reserved. <br/><p>Licensed under the <a href="https://github.com/cmw15004431816/cmw15004431816.github.io/blob/main/LICENSE">GPL v3.0 License</a> and <a href="https://github.com/cmw15004431816/cmw15004431816.github.io/blob/main/ADDITIONAL%20TERMS">additional terms</a>.</p>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/cmw15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on GitHub">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://stackoverflow.com/users/25033865/morgan-willow-chen" rel="noopener" target="_blank" title="Morgan Willow Chen on Stackoverflow">
+<svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M290.7 311 95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"></path></svg>
+</a>
+<a class="md-social__link" href="https://codeforces.com/profile/cmw15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on Codeforces">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5zm9 7.5A1.5 1.5 0 0 1 24 12v7.5a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V12a1.5 1.5 0 0 1 1.5-1.5z"></path></svg>
+</a>
+<a class="md-social__link" href="https://t.me/mwc15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on Telegram">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.45 10.45 0 0 1 3.53 6.716 43.8 43.8 0 0 1 .417 9.769"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/in/morgan-willow-chen-5b2337280/" rel="noopener" target="_blank" title="Morgan Willow Chen on LinkedIn">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.youtube.com/channel/UCrh1YzVHgef6YCR2MJLobEA" rel="noopener" target="_blank" title="Morgan Willow Chen on YouTube">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.facebook.com/profile.php?id=100085061186301" rel="noopener" target="_blank" title="Morgan Willow Chen on Facebook">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.instagram.com/mwc15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on Instagram">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.threads.net/@mwc15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on Threads">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M331.5 235.7c2.2.9 4.2 1.9 6.3 2.8 29.2 14.1 50.6 35.2 61.8 61.4 15.7 36.5 17.2 95.8-30.3 143.2-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2-32.3-41-48.9-98.1-49.5-169.6v-.5c.5-71.5 17.1-128.6 49.4-169.6 36.3-46.1 90.3-69.7 160.5-70.2h.3c70.3.5 124.9 24 162.3 69.9 18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4-29.2-35.8-73-54.2-130.5-54.6-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3 28 35.6 71.2 53.9 128.2 54.4 51.4-.4 85.4-12.6 113.7-40.9 32.3-32.2 31.7-71.8 21.4-95.9-6.1-14.2-17.1-26-31.9-34.9-3.7 26.9-11.8 48.3-24.7 64.8-17.1 21.8-41.4 33.6-72.7 35.3-23.6 1.3-46.3-4.4-63.9-16-20.8-13.8-33-34.8-34.3-59.3-2.5-48.3 35.7-83 95.2-86.4 21.1-1.2 40.9-.3 59.2 2.8-2.4-14.8-7.3-26.6-14.6-35.2-10-11.7-25.6-17.7-46.2-17.8h-.7c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6.4 99.9 39.5 103.7 107.7l-.2.2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3 25.6-1.4 54.6-11.4 59.5-73.2-13.2-2.9-27.8-4.4-43.4-4.4-4.8 0-9.6.1-14.4.4-42.9 2.4-57.2 23.2-56.2 41.8z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.quora.com/profile/Morgan-Willow-Chen-G" rel="noopener" target="_blank" title="Morgan Willow Chen on Quora">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M440.5 386.7h-29.3c-1.5 13.5-10.5 30.8-33 30.8-20.5 0-35.3-14.2-49.5-35.8 44.2-34.2 74.7-87.5 74.7-153C403.5 111.2 306.8 32 205 32 105.3 32 7.3 111.7 7.3 228.7c0 134.1 131.3 221.6 249 189C276 451.3 302 480 351.5 480c81.8 0 90.8-75.3 89-93.3M297 329.2C277.5 300 253.3 277 205.5 277c-30.5 0-54.3 10-69 22.8l12.2 24.3c6.2-3 13-4 19.8-4 35.5 0 53.7 30.8 69.2 61.3-10 3-20.7 4.2-32.7 4.2-75 0-107.5-53-107.5-156.7C97.5 124.5 130 71 205 71c76.2 0 108.7 53.5 108.7 157.7.1 41.8-5.4 75.6-16.7 100.5"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.reddit.com/user/CMW15004431816/" rel="noopener" target="_blank" title="Morgan Willow Chen on Reddit">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0s256 114.6 256 256-114.6 256-256 256H37.1c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256m349.6-102.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34-34.5 3.7-61.4 33-61.4 68.4v.2c-37.5 1.6-71.8 12.3-99 29.1-10.1-7.8-22.8-12.5-36.5-12.5-33 0-59.8 26.8-59.8 59.8 0 24 14.1 44.6 34.4 54.1 2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54 0-33-26.8-59.8-59.8-59.8-13.7 0-26.3 4.6-36.4 12.4-27.4-17-62.1-27.7-100-29.1v-.2c0-25.4 18.9-46.5 43.4-49.9 4.4 18.8 21.3 32.8 41.5 32.8zm-172.5 93.3c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6-31.4-8.8-30.4-30.5S160.3 247 177 247zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6 11.8-39.3 28.5-39.3 31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9.8-6.2 3.9-6.5 18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1.3 5.1 3.6 3.9 6.5"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.pinterest.com/cmw15004431816/" rel="noopener" target="_blank" title="Morgan Willow Chen on Pinterest">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.tiktok.com/@cmw15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on TikTok">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121 121 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"></path></svg>
+</a>
+<a class="md-social__link" href="https://open.spotify.com/user/31e225rqd5nznnsnl6bqpjidgyva" rel="noopener" target="_blank" title="Morgan Willow Chen on Spotify">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8m100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4m26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5m31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.tumblr.com/blog/mwc15004431816" rel="noopener" target="_blank" title="Morgan Willow Chen on Tumblr">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.snapchat.com/add/mwc15004431816/" rel="noopener" target="_blank" title="Morgan Willow Chen on Snapchat">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M496.926 366.6c-3.373-9.176-9.8-14.086-17.112-18.153a43 43 0 0 0-3.72-1.947c-2.182-1.128-4.414-2.22-6.634-3.373-22.8-12.09-40.609-27.341-52.959-45.42a103 103 0 0 1-9.089-16.12c-1.054-3.013-1-4.724-.248-6.287a10.2 10.2 0 0 1 2.914-3.038c3.918-2.591 7.96-5.22 10.7-6.993 4.885-3.162 8.754-5.667 11.246-7.44 9.362-6.547 15.909-13.5 20-21.278a42.37 42.37 0 0 0 2.1-35.191c-6.2-16.318-21.613-26.449-40.287-26.449a55.5 55.5 0 0 0-11.718 1.24 79 79 0 0 0-3.063.72c.174-11.16-.074-22.94-1.066-34.534-3.522-40.758-17.794-62.123-32.674-79.16A130.2 130.2 0 0 0 332.1 36.443C309.515 23.547 283.91 17 256 17s-53.4 6.547-76 19.443a129.7 129.7 0 0 0-33.281 26.783c-14.88 17.038-29.152 38.44-32.673 79.161-.992 11.594-1.24 23.435-1.079 34.533-1-.26-2.021-.5-3.051-.719a55.5 55.5 0 0 0-11.717-1.24c-18.687 0-34.125 10.131-40.3 26.449a42.42 42.42 0 0 0 2.046 35.228c4.105 7.774 10.652 14.731 20.014 21.278 2.48 1.736 6.361 4.24 11.246 7.44 2.641 1.711 6.5 4.216 10.28 6.72a11.05 11.05 0 0 1 3.3 3.311c.794 1.624.818 3.373-.36 6.6a102 102 0 0 1-8.94 15.785c-12.077 17.669-29.363 32.648-51.434 44.639C32.355 348.608 20.2 352.75 15.069 366.7c-3.868 10.528-1.339 22.506 8.494 32.6a49.1 49.1 0 0 0 12.4 9.387 134.3 134.3 0 0 0 30.342 12.139 20 20 0 0 1 6.126 2.741c3.583 3.137 3.075 7.861 7.849 14.78a34.5 34.5 0 0 0 8.977 9.127c10.019 6.919 21.278 7.353 33.207 7.811 10.776.41 22.989.881 36.939 5.481 5.778 1.91 11.78 5.605 18.736 9.92C194.842 480.951 217.707 495 255.973 495s61.292-14.123 78.118-24.428c6.907-4.24 12.872-7.9 18.489-9.758 13.949-4.613 26.163-5.072 36.939-5.481 11.928-.459 23.187-.893 33.206-7.812a34.6 34.6 0 0 0 10.218-11.16c3.434-5.84 3.348-9.919 6.572-12.771a19 19 0 0 1 5.753-2.629 135 135 0 0 0 30.752-12.251 48.3 48.3 0 0 0 13.019-10.193l.124-.149c9.226-9.868 11.545-21.501 7.763-31.768m-34.013 18.277c-20.745 11.458-34.533 10.23-45.259 17.137-9.114 5.865-3.72 18.513-10.342 23.076-8.134 5.617-32.177-.4-63.239 9.858-25.618 8.469-41.961 32.822-88.038 32.822s-62.036-24.3-88.076-32.884c-31-10.255-55.092-4.241-63.239-9.858-6.609-4.563-1.24-17.211-10.341-23.076-10.739-6.907-24.527-5.679-45.26-17.075-13.206-7.291-5.716-11.8-1.314-13.937 75.143-36.381 87.133-92.552 87.666-96.719.645-5.046 1.364-9.014-4.191-14.148-5.369-4.96-29.189-19.7-35.8-24.316-10.937-7.638-15.748-15.264-12.2-24.638 2.48-6.485 8.531-8.928 14.879-8.928a27.6 27.6 0 0 1 5.965.67c12 2.6 23.659 8.617 30.392 10.242a10.8 10.8 0 0 0 2.48.335c3.6 0 4.86-1.811 4.612-5.927-.768-13.132-2.628-38.725-.558-62.644 2.84-32.909 13.442-49.215 26.04-63.636 6.051-6.932 34.484-36.976 88.857-36.976s82.88 29.92 88.931 36.827c12.611 14.421 23.225 30.727 26.04 63.636 2.071 23.919.285 49.525-.558 62.644-.285 4.327 1.017 5.927 4.613 5.927a10.7 10.7 0 0 0 2.48-.335c6.745-1.624 18.4-7.638 30.4-10.242a27.6 27.6 0 0 1 5.964-.67c6.386 0 12.4 2.48 14.88 8.928 3.546 9.374-1.24 17-12.189 24.639-6.609 4.612-30.429 19.343-35.8 24.315-5.568 5.134-4.836 9.1-4.191 14.149.533 4.228 12.511 60.4 87.666 96.718 4.446 2.22 11.936 6.733-1.27 14.086"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input checked="" class="md-toggle" id="__settings" type="checkbox"/>
+<div class="md-consent__settings">
+<ul class="task-list">
+</ul>
+</div>
+<div class="md-consent__controls">
+<button class="md-button md-button--primary">Accept</button>
+<button class="md-button md-button--primary" type="reset">Reject</button>
+</div>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
